@@ -3,20 +3,16 @@
 .container__wrapper--home {
 
   &.first_block {
-    display: flex;
-    flex-direction: row;
+    .container {
+
+      display: flex;
+      flex-direction: row;
+    }
 
     .first_block--title {
       min-width: 350px;
 
-      h1 {
-        font-family: $title;
-        color: $main_color;
-        font-size: 28px;
-        line-height: 34px;
-        letter-spacing: 1.4px;
-        font-weight: 600;
-      }
+
     }
 
     .first_block--block {

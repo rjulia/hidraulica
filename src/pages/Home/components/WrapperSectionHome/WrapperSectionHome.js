@@ -3,8 +3,11 @@ import './wrappersectionhome.scss';
 
 const WrapperSectionHome = ({ children, classN }) => {
   return (
-    <div className={`container container__wrapper--home ${classN}`}>
-      {children}
+    <div className={`container__wrapper--home ${classN}`}>
+      <div className="container">
+
+        {children}
+      </div>
     </div>
   )
 }

@@ -26,7 +26,6 @@ const getHomeSlider = (language) =>
       locale: language
     })
     .then(response => {
-      console.log(response)
       return response.items
     })
 
