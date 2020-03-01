@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Atoms/ic_check_green</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/ic_check_green" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Surface" x="0" y="0" width="24" height="24"></rect>
+        <path d="M9.83999605,14.2130733 L18.6002688,5.62235419 C19.2311835,5.00365078 19.2410826,3.99063518 18.6223792,3.35972052 C18.0036758,2.72880586 16.9906602,2.71890669 16.3597456,3.3376101 L5.12001833,14.3597942 L12.4328614,20.6897282 C13.1009857,21.2680509 14.1114306,21.1952523 14.6897533,20.527128 C15.268076,19.8590036 15.1952773,18.8485587 14.527153,18.270236 L9.83999605,14.2130733 Z" id="Path" fill="#7BC138" fill-rule="nonzero" transform="translate(12.100013, 11.979995) scale(-1, 1) rotate(-90.000000) translate(-12.100013, -11.979995) "></path>
+    </g>
+</svg>

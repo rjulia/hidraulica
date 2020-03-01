@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Atoms/ic_arrow_down_blue</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Atoms/ic_arrow_down_blue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Surface" x="0" y="0" width="24" height="24"></rect>
+        <path d="M15.4142136,8.41421356 C15.8047379,8.02368927 15.8047379,7.39052429 15.4142136,7 C15.0236893,6.60947571 14.3905243,6.60947571 14,7 L8.29289322,12.7071068 L14,18.4142136 C14.3905243,18.8047379 15.0236893,18.8047379 15.4142136,18.4142136 C15.8047379,18.0236893 15.8047379,17.3905243 15.4142136,17 L11.1213203,12.7071068 L15.4142136,8.41421356 Z" id="Path" fill="#10ACE4" fill-rule="nonzero" transform="translate(12.000000, 12.707107) scale(-1, 1) rotate(-90.000000) translate(-12.000000, -12.707107) "></path>
+    </g>
+</svg>
