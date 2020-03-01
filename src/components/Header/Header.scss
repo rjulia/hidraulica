@@ -1,0 +1,26 @@
+@import '../../scss/variables';
+
+.container_menu {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+
+.menu {
+  display: inline-flex;
+  font-family: $title;
+
+  li {
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $text_color;
+
+    & .active {
+      color: $main_color;
+    }
+  }
+}

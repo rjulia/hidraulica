@@ -15,6 +15,7 @@ const Projects = props => {
     })
   }, [])
   console.log(posts)
+  if (isLoading) return <p>Loading...</p>
   return (
     <div>
       Projects

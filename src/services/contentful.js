@@ -19,7 +19,16 @@ const getSingleProject = slug =>
     })
     .then(response => response.items)
 
+const getHomeSlider = (language) =>
+  client
+    .getEntries({
+      content_type: 'heroImage',
+      locale: language
+    })
+    .then(response => {
+      console.log(response)
+      return response.items
+    })
 
 
-
-export { getProjects, getSingleProject }
+export { getProjects, getSingleProject, getHomeSlider }

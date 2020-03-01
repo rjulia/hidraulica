@@ -8,6 +8,8 @@ import {
 import { Header } from "./components";
 import { Home, Projects, Services, Company, Contact } from "./pages";
 import { withTranslation } from 'react-i18next';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -18,11 +20,11 @@ function App({ t, i18n }) {
       <Header />
       <Suspense fallback="loading">
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/empresa" component={Company} />
-          <Route path="/servicios" component={Services} />
-          <Route path="/projectos" component={() => <Projects i18n={i18n} />} />
-          <Route path="/contact" component={Contact} />
+          <Route exact path="/" component={() => <Home />} />
+          <Route exact path="/empresa" component={Company} />
+          <Route exact path="/servicios" component={Services} />
+          <Route exact path="/projectos" component={() => <Projects i18n={i18n} />} />
+          <Route exact path="/contact" component={Contact} />
         </Switch>
       </Suspense>
     </Router>
