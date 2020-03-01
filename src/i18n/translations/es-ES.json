@@ -1,6 +1,117 @@
 {
   "404": {
-    "content": "La paguina no se encuentra",
+    "content": "La paguina no es troba dsiponible",
     "title": "Página 404"
+  },
+  "menu": {
+    "home": "inicio",
+    "company": "empresa",
+    "service": "servicios",
+    "project": "proyectos",
+    "contact": "contacto"
+  },
+  "home": {
+    "first_block": {
+      "title": "Sobre nosaltres",
+      "description": "Hidràulica Catalana de Manteniment, SL va ser creada l’any 1993 com a empresa dirigida al món dels serveis, manteniment i reparacions electromecàniques dins el cercle integral de l’aigua amb una dilatada experiència tan en aigua potable com residual. Durant més de 20 anys hem estat aportant valor afegit al disseny, la construcció, la instal·lació i el manteniment d’instal·lacions hidromecàniques dels nostres clients. Disposem d’un parc mòbil de 8 vehicles totalment equipats i unes instal·lacions de 600 m2 formades per la oficina tècnica, el taller i el magatzem.",
+      "subtitle": "Empresa homologada per:"
+    },
+    "second_block": {
+      "title": "Ultims projectes",
+      "button": "MOSTRAR TOTS"
+    },
+    "third_block": {
+      "title": "Els nostres clients"
+    },
+    "form_contact": {
+      "title": "Contacta amb nosaltres",
+      "person": {
+        "label": "PERSONA DE CONTACTE *",
+        "placeholder": "Nom i cognoms"
+      },
+      "company": {
+        "label": "EMPRESA",
+        "placeholder": "Nom de la empresa"
+      },
+      "email": {
+        "label": "EMAIL *",
+        "placeholder": "Direcció de correu electrónic"
+      },
+      "message": {
+        "label": "MISSATGE *",
+        "placeholder": "Siusplau, escriu aqui el teu missatge…"
+      },
+      "remark": "* Els camps marcats son obligatoris"
+    },
+    "footer": {
+      "copyright": "© 2020 Tots els drets reservats",
+      "menu_button": {
+        "title": "LLOC WEB",
+        "home": "INICI",
+        "company": "EMPRESA",
+        "services": "EMPRESA",
+        "projects": "PROJECTES",
+        "contact": "CONTACTE"
+      },
+      "legal_button": {
+        "title": "LEGAL",
+        "terms_conditions": "TERMES I CONDICIONS LEGALS",
+        "policy": "POLITICA DE PRIVACITAT",
+        "cookies": "COOKIES"
+      }
+    }
+  },
+
+  "company": {
+    "tiltle": "Empresa",
+    "first_block": {
+      "title": "Els nostres valors",
+      "description": "Hidràulica Catalana centra la seva activitat principal en la instal·lació, transformació, reparació i manteniment d’instal·lacions hidràuliques intentant ser un referent com a empresa innovadora en el sector del manteniment industrial per donar solucions i serveis adaptats a les necessitats del client Adoptem una millora continua en els nostres processos i portem a terme una optimització constant de la gestió dels recursos que, gràcies a la flexibilitat de la nostra estructura, als equips de treballs formats i a la gran varietat de proveïdors ens ha portat a poder donar solucions òptimes podent escollir la més idònia en cada situació.",
+      "button": "Llegir més"
+    },
+    "second_block": {
+      "title": "Equip",
+      "description": "A Hidràulica Catalana de Manteniment estem en un procés de creixement que fa que en aquest moment contem amb un equip humà de més de 15 especialistes altament qualificats."
+    }
+  },
+  "services": {
+    "tiltle": "Reparació i conservació de xarxes d’aigua potable",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore.",
+    "first_block": {
+      "title": "Descripció",
+      "description": "L’aigua és un element necessari per a la vida i per al desenvolupament de les activitats econòmiques, però alhora és un element escàs. Per aquest motiu, cal afavorir-ne i promoure’n el seu ús racional i per aquesta raó, com a empresa dedicada al mon del manteniment integral oferim assistència als nostres clients per tal de resoldre qualsevol anomalia en el subministrament. Gràcies a la nostra dilatada experiència en aquest àmbit, podem efectuar estudis de les instal·lacions, contractes de manteniment i proposta de millores, resultat d’una llarga experiència en el sector dels serveis, portant el manteniment de diferents depuradores, càmpings, urbanitzacions, comunitats, empreses, etc.. els qual exigeixen un alt grau d’efectivitat a l’hora de procedir a realitzar les tasques.",
+      "button": "Llegir més"
+    },
+    "second_block": {
+      "title": "Que oferim?"
+    },
+    "third_block": {
+      "title": "Projectes relacionats",
+      "button": "MOSTRAR TOTS"
+    }
+  },
+  "projects": {
+    "tite": "Obres executades",
+    "subtitle": {
+      "first_subtitle": {
+        "label": "SERVEI",
+        "placeholder": "Totes les categories"
+      },
+      "second_subtitle": {
+        "label": "LOCALITZACIÓ",
+        "placeholder": "Totes les ubicacions"
+      },
+      "third_subtitle": {
+        "label": "DATA REALITZACIÓ",
+        "placeholder": "Els més recents"
+      }
+    },
+    "next_page_button": "SEGÜENT",
+    "previous_page_button": "previous"
+  },
+  "contact": {
+    "tite": "Contacte",
+    "subtitle": "On ens trobem?",
+    "description": "L'empresa es troba ubicada al polígon industrial Can Verdalet a la localitat de Tordera. És possible arribar tant amb cotxe com amb transport públic, ja que l'estació de trens està situada a dos minuts a peu de la nostra seu."
   }
 }

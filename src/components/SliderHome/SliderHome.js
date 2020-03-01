@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
 import { getHomeSlider } from '../../services/contentful'
 import { withTranslation } from 'react-i18next';
-
+import './SliderHome.scss'
 const SliderHome = ({ i18n }) => {
 
-  const promise = getHomeSlider(i18n.lng || "es-ES")
+  const promise = getHomeSlider(i18n.language)
   const [sliders, setSliders] = useState([])
   const [isLoading, setLoading] = useState(true)
   useEffect(() => {
@@ -18,16 +18,24 @@ const SliderHome = ({ i18n }) => {
     dots: true,
     fade: true,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
     slidesToShow: 1,
     slidesToScroll: 1
   };
   if (isLoading) return <p>Loading...</p>
   return (
-    <div>
-      <h2>Fade</h2>
+    <div className="slider__container">
       <Slider {...settings}>
-        {sliders.map(slider => console.log(slider))}
+        {sliders.map(slider => (
+          <div key={slider.sys.id}>
+            <img src={slider.fields.image.fields.file.url} alt="" />
+            <h2 className="title__slider">{slider.fields.title}</h2>
+            <p className="subtitle__slider">{slider.fields.subtitle}</p>
+            <p className="author">author: <span>{slider.fields.author}</span> de la web: {slider.fields.sponsor}</p>
+          </div>
+        ))}
       </Slider>
     </div>
   )
