@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getProjects } from '../services/contentful'
+import { getProjects } from '../../services/contentful'
 
 
 const Projects = props => {

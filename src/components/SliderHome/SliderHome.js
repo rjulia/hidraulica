@@ -33,7 +33,7 @@ const SliderHome = ({ i18n }) => {
             <img src={slider.fields.image.fields.file.url} alt="" />
             <h2 className="title__slider">{slider.fields.title}</h2>
             <p className="subtitle__slider">{slider.fields.subtitle}</p>
-            <p className="author">author: <span>{slider.fields.author}</span> de la web: {slider.fields.sponsor}</p>
+            <p className="author">author: <span>{slider.fields.author}</span> de la web: <span>{slider.fields.sponsor}</span> </p>
           </div>
         ))}
       </Slider>

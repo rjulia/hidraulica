@@ -1,5 +1,5 @@
-export { default as Company } from './Company';
-export { default as Contact } from './Contact';
-export { default as Home } from './Home';
-export { default as Projects } from './Projects';
-export { default as Services } from './Services';
+export { default as Company } from './company/Company';
+export { default as Contact } from './contact/Contact';
+export { default as Home } from './Home/Home';
+export { default as Projects } from './projects/Projects';
+export { default as Services } from './services/Services';
