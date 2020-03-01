@@ -1,0 +1,28 @@
+{
+  "404": {
+    "content": "La paguina no es troba dsiponible",
+    "title": "Página 404"
+  },
+  "menu": {
+    "home": "inici",
+    "company": "empresa"
+  },
+  "home": {
+    "first_block": {
+      "title": "Sobre nosaltres",
+      "description": "Hidràulica Catalana de Manteniment, SL va ser creada l’any 1993 com a empresa dirigida al món dels serveis, manteniment i reparacions electromecàniques dins el cercle integral de l’aigua amb una dilatada experiència tan en aigua potable com residual. Durant més de 20 anys hem estat aportant valor afegit al disseny, la construcció, la instal·lació i el manteniment d’instal·lacions hidromecàniques dels nostres clients. Disposem d’un parc mòbil de 8 vehicles totalment equipats i unes instal·lacions de 600 m2 formades per la oficina tècnica, el taller i el magatzem.",
+      "subtitle": "bla"
+    },
+    "second_block": {
+
+    },
+    "from_contact": {
+      "title": "sd",
+      "person": {
+
+      }
+    }
+  },
+  "footer": {},
+  "company": {}
+}
