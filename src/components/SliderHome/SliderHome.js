@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Slider from "react-slick";
-import { getHomeSlider } from '../../services/contentful'
+import { getHomeSlider } from 'services/contentful'
 import { withTranslation } from 'react-i18next';
 import './SliderHome.scss'
 const SliderHome = ({ i18n }) => {

@@ -2,7 +2,7 @@
 
 .container__wrapper--home {
 
-  &.first_block {
+  &.block {
     .container {
 
       display: flex;
@@ -11,8 +11,6 @@
 
     .first_block--title {
       min-width: 350px;
-
-
     }
 
     .first_block--block {
@@ -32,6 +30,15 @@
 
       img {
         max-width: 300px;
+      }
+    }
+
+    &.dark {
+      background-color: $black;
+
+      .first_block--description {
+        color: $white;
+
       }
     }
   }

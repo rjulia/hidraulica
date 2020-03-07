@@ -29,5 +29,16 @@ const getHomeSlider = (language) =>
       return response.items
     })
 
+const getLogosSlider = (language) =>
+  client
+    .getEntries({
+      content_type: 'clients',
+      locale: language,
+      order: 'sys.createdAt'
+    })
+    .then(response => {
+      return response.items
+    })
 
-export { getProjects, getSingleProject, getHomeSlider }
+
+export { getProjects, getSingleProject, getHomeSlider, getLogosSlider }

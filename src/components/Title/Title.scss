@@ -23,12 +23,16 @@
     bottom: 0;
     left: 0;
     background: linear-gradient(to right, #96daf3 0%, #e3f5fb 100%);
-
   }
 
   &.dark {
     h2 {
       color: $white;
+    }
+
+    span {
+      background: linear-gradient(to right, #96daf3 0%, #000 100%);
+
     }
   }
 }
