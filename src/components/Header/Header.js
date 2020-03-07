@@ -1,17 +1,33 @@
-import React from 'react'
+import _ from 'lodash'
+import React, { useState } from 'react'
 import { withTranslation, useTranslation } from 'react-i18next';
-import { Logo } from "../index";
+import { Logo, MenuFlag } from "../index";
+import CatFlag from 'assets/icons/ic_flag_catalonia.svg'
+import EspFlag from 'assets/icons/ic_flag_spain.svg'
 import './Header.scss'
-import {
-  NavLink as Link
-} from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
+import Arrow from 'assets/icons/ic_arrow_down_blue.svg'
 const Header = () => {
 
   const { i18n, t } = useTranslation();
-
+  const [isMenuFlagOpen, setisMenuFlagOpen] = useState(false)
+  console.log(i18n)
   const changeLanguage = lng => {
+    setisMenuFlagOpen(!isMenuFlagOpen)
     i18n.changeLanguage(lng);
   };
+  const flag = () => {
+    if (_.get(i18n, 'languages[1]') === 'ca') {
+      return CatFlag
+    } else {
+      return EspFlag
+    }
+  }
+
+  const handelMenuFlag = () => {
+    setisMenuFlagOpen(!isMenuFlagOpen)
+  }
+
   return (
     <div className="container__fluid">
       <div className="container container_menu">
@@ -33,9 +49,14 @@ const Header = () => {
             <Link to="/contact">{t('menu.contact')}</Link>
           </li>
         </ul>
-        <ul>
-          <li onClick={() => changeLanguage('es-ES')}>ES</li>
-          <li onClick={() => changeLanguage('ca-ES')}>CAT</li>
+        <ul className="menu--flags" onClick={() => handelMenuFlag()}>
+          <img src={flag()} alt="flag" />
+          <img src={Arrow} alt="arrow" />
+
+          {
+            isMenuFlagOpen && (<MenuFlag changeLanguage={changeLanguage} />)
+          }
+
         </ul>
       </div>
     </div>

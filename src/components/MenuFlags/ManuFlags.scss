@@ -1,0 +1,28 @@
+.menuFlag__container {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  width: 224px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  background-color: white;
+  padding: 20px;
+
+  .menuFlag__box {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &>div {
+      display: flex;
+
+      &>p {
+        margin-left: 15px;
+      }
+    }
+  }
+}
