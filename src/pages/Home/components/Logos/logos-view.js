@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import _ from 'lodash'
 import React, { useEffect, useState } from 'react'
 import { useStyles } from './logos-styles'
@@ -12,12 +13,11 @@ const LogosView = ({ i18n }) => {
   const promise = getLogosSlider(i18n.language)
 
   useEffect(() => {
-    promise.then(logos => {
-      setLogos(logos)
+    promise.then(logosI => {
+      setLogos(logosI)
       setLoading(false)
     })
   }, [])
-  console.log(logos)
   if (isLoading) return <p>Loading...</p>
   return (
     <div className={classes.root}>
@@ -30,7 +30,7 @@ const LogosView = ({ i18n }) => {
 
         {
           logos.map(logo => (
-            <Grid key={_.get(logo, 'sys.id')} item xs={6} sm={4}>
+            <Grid key={_.get(logo, 'sys.id')} item xs={6} sm={3}>
               <img
                 className={classes.img}
                 src={_.get(logo, 'fields.imageLogo.fields.file.url')}

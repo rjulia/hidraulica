@@ -5,6 +5,7 @@ import './Home.scss'
 import WrapperSectionHome from './components/WrapperSectionHome/WrapperSectionHome';
 import Logos from "./components/Logos/logos-view";
 import ImgLogos from "assets/images/img_home_homologaciones.png"
+import Carousel from './components/Carousel/Carousel';
 
 const Home = (props) => {
   const { t } = props
@@ -26,28 +27,27 @@ const Home = (props) => {
           </div>
         </div>
       </WrapperSectionHome>
-      <WrapperSectionHome classN={'block dark'}>
+      <WrapperSectionHome classN={'column dark'}>
         <div className="first_block--title">
           <Title dark text={t('home.second_block.title')} />
           <Button />
         </div>
         <div className="block__carousel">
-
+          <Carousel />
         </div>
       </WrapperSectionHome>
-      <WrapperSectionHome classN={'block'}>
-        <div className="first_block--title">
-          <Title dark text={t('home.second_block.title')} />
-          <Button />
+      <WrapperSectionHome classN={'column'}>
+        <div className="second_block--title">
+          <Title text={t('home.third_block.title')} />
+
         </div>
         <div className="block__logos">
           <Logos />
         </div>
       </WrapperSectionHome>
-      <WrapperSectionHome classN={'block'}>
+      <WrapperSectionHome classN={'column'}>
         <div className="first_block--title">
-          <Title dark text={t('home.second_block.title')} />
-          <Button />
+          <Title text={t('home.form_contact.title')} />
         </div>
         <div className="block__contact">
 
