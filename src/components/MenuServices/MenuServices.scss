@@ -1,0 +1,31 @@
+@import '../../scss/variables';
+
+.menu-services__container {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 100000;
+
+  .menu-services__box {
+    background-color: $white;
+    z-index: 1000000;
+    padding: 0 50px 50px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .MuiGrid-container {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+
+  &.show {
+    display: block;
+  }
+}

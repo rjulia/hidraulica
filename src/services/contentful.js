@@ -3,6 +3,16 @@ const client = require('contentful').createClient({
   accessToken: process.env.REACT_APP_ACCESS_TOKEN
 })
 
+const getServices = (language) =>
+  client
+    .getEntries({
+      content_type: 'subservices',
+      locale: language,
+      order: 'sys.createdAt'
+    })
+    .then(response => response.items)
+
+
 const getProjects = (language) =>
   client
     .getEntries({
@@ -41,4 +51,4 @@ const getLogosSlider = (language) =>
     })
 
 
-export { getProjects, getSingleProject, getHomeSlider, getLogosSlider }
+export { getProjects, getSingleProject, getHomeSlider, getLogosSlider, getServices }

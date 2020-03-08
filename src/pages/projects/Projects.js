@@ -26,7 +26,9 @@ const Projects = props => {
         image={ImgHero}
 
       />
-      Projects
+      {
+        posts && "hay posts"
+      }
     </div>
   )
 }

@@ -7,8 +7,8 @@ import EspFlag from 'assets/icons/ic_flag_spain.svg'
 import './Header.scss'
 import { NavLink as Link } from "react-router-dom";
 import Arrow from 'assets/icons/ic_arrow_down_blue.svg'
-const Header = () => {
-
+const Header = ({ handelMenu, isOpen }) => {
+  console.log(isOpen)
   const { i18n, t } = useTranslation();
   const [isMenuFlagOpen, setisMenuFlagOpen] = useState(false)
   const changeLanguage = lng => {
@@ -26,6 +26,12 @@ const Header = () => {
   const handelMenuFlag = () => {
     setisMenuFlagOpen(!isMenuFlagOpen)
   }
+  const handelMenuEvent = (e) => {
+    console.log(isOpen)
+    if (isOpen) {
+      handelMenu()
+    }
+  }
 
   return (
     <div className="container__fluid">
@@ -36,10 +42,12 @@ const Header = () => {
             <Link exact to="/">{t('menu.home')}</Link>
           </li>
           <li>
-            <Link to="/empresa">{t('menu.company')}</Link>
+            <Link
+              onClick={(e) => handelMenuEvent(e)}
+              to="/empresa">{t('menu.company')}</Link>
           </li>
           <li>
-            <Link to="/servicios">{t('menu.service')}</Link>
+            <Link to='services' onClick={() => handelMenu()}>{t('menu.service')}</Link>
           </li>
           <li>
             <Link to="/projectos">{t('menu.project')}</Link>

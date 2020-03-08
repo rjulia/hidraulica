@@ -6,6 +6,7 @@ export { default as ImageFrame } from './ImageFrame/ImageFrame';
 export { default as Loading } from './Loading/Loading';
 export { default as Logo } from './Logo/Logo';
 export { default as MenuFlag } from './MenuFlags/MenuFlags';
+export { default as MenuServices } from './MenuServices/MenuServices';
 export { default as SliderHome } from './SliderHome/SliderHome';
 export { default as Title } from './Title/Title';
 export { default as WrapperSection } from './WrapperSection/WrapperSection';

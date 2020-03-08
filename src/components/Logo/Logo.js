@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Logo.scss"
 import LogoImgWhite from 'assets/icons/ic_logo_white.svg'
 import LogoImgBlack from 'assets/icons/ic_logo_black.svg'
