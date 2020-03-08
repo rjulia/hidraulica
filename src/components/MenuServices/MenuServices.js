@@ -6,10 +6,12 @@ import classNames from 'classnames'
 import { getServices } from 'services/contentful'
 import { withTranslation } from 'react-i18next';
 import { Grid } from '@material-ui/core';
+import useMenu from 'components/Header/use-header-context';
 import MenuListServices from '../MenuListServices/MenuListServices';
 
 const MenuServices = props => {
-  const { isOpen, i18n, handelMenu } = props
+  const { i18n, handelMenu } = props
+  const { toggleMenu, isOpen } = useMenu()
   const promise = getServices(i18n.language)
   const [subservices, setSubservices] = useState([])
   const [isLoading, setLoading] = useState(true)
@@ -48,7 +50,7 @@ const MenuServices = props => {
                 category={category}
                 subservices={subservices}
                 i18n={i18n}
-                handelMenu={handelMenu}
+                handelMenu={toggleMenu}
               />
             ))
           }
