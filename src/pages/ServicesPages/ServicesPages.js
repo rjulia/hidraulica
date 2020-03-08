@@ -3,7 +3,7 @@ import { withTranslation } from 'react-i18next';
 import { HeroImage } from "components";
 import ImgHero from "assets/images/img_slider_home_example.png";
 
-const Services = (props) => {
+const ServicesPages = (props) => {
   const { t } = props
   return (
     <div className="container company__container">
@@ -17,4 +17,4 @@ const Services = (props) => {
   )
 }
 
-export default withTranslation()(Services)
+export default withTranslation()(ServicesPages)
