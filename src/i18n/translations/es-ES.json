@@ -75,7 +75,7 @@
     }
   },
   "services": {
-    "tiltle": "Reparació i conservació de xarxes d’aigua potable",
+    "title": "Reparació i conservació de xarxes d’aigua potable",
     "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore.",
     "first_block": {
       "title": "Descripció",
@@ -91,7 +91,7 @@
     }
   },
   "projects": {
-    "tite": "Obres executades",
+    "title": "Obres executades",
     "subtitle": {
       "first_subtitle": {
         "label": "SERVEI",
@@ -110,7 +110,7 @@
     "previous_page_button": "previous"
   },
   "contact": {
-    "tite": "Contacte",
+    "titte": "Contacte",
     "subtitle": "On ens trobem?",
     "description": "L'empresa es troba ubicada al polígon industrial Can Verdalet a la localitat de Tordera. És possible arribar tant amb cotxe com amb transport públic, ja que l'estació de trens està situada a dos minuts a peu de la nostra seu."
   }

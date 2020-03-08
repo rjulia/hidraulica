@@ -1,11 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { withTranslation } from 'react-i18next';
 import { getProjects } from '../../services/contentful'
-
+import { HeroImage } from "components";
+import './Projectes.scss'
+import ImgHero from "assets/images/img_slider_home_example.png";
 
 const Projects = props => {
-  console.log(props)
-  const { i18n } = props
+  const { i18n, t } = props
   const promise = getProjects(i18n.language)
   const [posts, setPosts] = useState([])
   const [isLoading, setLoading] = useState(true)
@@ -15,12 +17,16 @@ const Projects = props => {
       setLoading(false)
     })
   }, [])
-  console.log(posts)
   if (isLoading) return <p>Loading...</p>
   return (
-    <div>
+    <div className='projects__contianer container'>
+      <HeroImage
+        title={t('projects.title')}
+        image={ImgHero}
+
+      />
       Projects
     </div>
   )
 }
-export default Projects
+export default withTranslation()(Projects)
