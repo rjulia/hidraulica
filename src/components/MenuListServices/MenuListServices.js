@@ -26,7 +26,7 @@ const MenuListServices = ({ category, i18n, subservices, handelMenu }) => {
               >
                 <Link
                   onClick={() => HandleCloseMenu()}
-                  to={`services/${_.get(item, 'fields.slug')}`}>
+                  to={`servicios/${_.get(item, 'fields.slug')}`}>
                   {_.get(item, 'fields.title')}
                 </Link>
               </li>

@@ -50,7 +50,11 @@ const Header = () => {
               to="/empresa">{t('menu.company')}</Link>
           </li>
           <li>
-            <Link to='services' onClick={() => toggleMenu()}>{t('menu.service')}</Link>
+            <Link
+              to='/servicios'
+              onClick={() => toggleMenu()}>
+              {t('menu.service')}
+            </Link>
           </li>
           <li>
             <Link onClick={() => handelMenuEvent()}

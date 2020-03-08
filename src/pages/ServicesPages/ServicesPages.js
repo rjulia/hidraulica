@@ -1,20 +1,16 @@
 import React from 'react'
-import { withTranslation } from 'react-i18next';
-import { HeroImage } from "components";
-import ImgHero from "assets/images/img_slider_home_example.png";
+import useMenu from 'components/Header/use-header-context';
+import { ServiceDetail } from "components";
 
-const ServicesPages = (props) => {
-  const { t } = props
+const ServicesPages = () => {
+
+  const { services } = useMenu()
+
   return (
-    <div className="container company__container">
-      <HeroImage
-        title={t('services.title')}
-        image={ImgHero}
-        subtitle={t('services.subtitle')}
-      />
-      Services
+    <div className="container-fluid company__container">
+      <ServiceDetail service={services[0]} />
     </div>
   )
 }
 
-export default withTranslation()(ServicesPages)
+export default ServicesPages

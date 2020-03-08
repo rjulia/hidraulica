@@ -11,7 +11,15 @@ const getServices = (language) =>
       order: 'sys.createdAt'
     })
     .then(response => response.items)
-
+const getService = (language, slug) =>
+  client
+    .getEntries({
+      'fields.slug': slug,
+      content_type: 'subservices',
+      locale: language,
+      order: 'sys.createdAt'
+    })
+    .then(response => response.items)
 
 const getProjects = (language) =>
   client
@@ -51,4 +59,4 @@ const getLogosSlider = (language) =>
     })
 
 
-export { getProjects, getSingleProject, getHomeSlider, getLogosSlider, getServices }
+export { getProjects, getSingleProject, getHomeSlider, getLogosSlider, getServices, getService }

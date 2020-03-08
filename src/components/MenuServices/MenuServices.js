@@ -10,8 +10,8 @@ import useMenu from 'components/Header/use-header-context';
 import MenuListServices from '../MenuListServices/MenuListServices';
 
 const MenuServices = props => {
-  const { i18n, handelMenu } = props
-  const { toggleMenu, isOpen } = useMenu()
+  const { i18n } = props
+  const { toggleMenu, isOpen, getServicesCtx } = useMenu()
   const promise = getServices(i18n.language)
   const [subservices, setSubservices] = useState([])
   const [isLoading, setLoading] = useState(true)
@@ -30,8 +30,9 @@ const MenuServices = props => {
   })
   useEffect(() => {
 
-    promise.then(sliders => {
-      setSubservices(sliders)
+    promise.then(services => {
+      setSubservices(services)
+      getServicesCtx(services)
       setLoading(false)
     })
 
