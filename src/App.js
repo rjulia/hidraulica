@@ -12,14 +12,10 @@ import { withTranslation } from 'react-i18next';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-
 function App({ t, i18n }) {
-
 
   return (
     <HeaderProvider>
-
       <Router>
         <Header />
         <Suspense fallback="loading">
