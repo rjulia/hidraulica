@@ -1,7 +1,7 @@
 import React from 'react'
-import './wrappersectionhome.scss';
+import './wrappersection.scss';
 
-const WrapperSectionHome = ({ children, classN }) => {
+const WrapperSection = ({ children, classN }) => {
   return (
     <div className={`container__wrapper--home ${classN}`}>
       <div className="container">
@@ -12,4 +12,4 @@ const WrapperSectionHome = ({ children, classN }) => {
   )
 }
 
-export default WrapperSectionHome
+export default WrapperSection

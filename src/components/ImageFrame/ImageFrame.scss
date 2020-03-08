@@ -1,0 +1,19 @@
+.frame {
+  position: relative;
+  display: block;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+
+  .frame__interior {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 105%;
+      height: 105%;
+    }
+  }
+}

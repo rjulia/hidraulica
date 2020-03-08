@@ -2,7 +2,7 @@ import React from 'react'
 import { withTranslation } from 'react-i18next';
 import { SliderHome, Button, Title } from 'components';
 import './Home.scss'
-import WrapperSectionHome from './components/WrapperSectionHome/WrapperSectionHome';
+import { WrapperSection } from 'components/';
 import Logos from "./components/Logos/logos-view";
 import ImgLogos from "assets/images/img_home_homologaciones.png"
 import Carousel from './components/Carousel/Carousel';
@@ -14,8 +14,7 @@ const Home = (props) => {
       <div className="container">
         <SliderHome />
       </div>
-      <WrapperSectionHome classN={'block'}>
-
+      <WrapperSection classN={'block'}>
         <div className="first_block--title">
           <Title text={t('home.first_block.title')} />
         </div>
@@ -23,11 +22,11 @@ const Home = (props) => {
           <p className='first_block--description'>{t('home.first_block.description')}</p>
           <p className='first_block--subtitulo'>{t('home.first_block.subtitle')}</p>
           <div>
-            <img src={ImgLogos} alt="" />
+            <img className='home__logos' src={ImgLogos} alt="" />
           </div>
         </div>
-      </WrapperSectionHome>
-      <WrapperSectionHome classN={'column dark'}>
+      </WrapperSection>
+      <WrapperSection classN={'column dark'}>
         <div className="first_block--title">
           <Title dark text={t('home.second_block.title')} />
           <Button />
@@ -35,8 +34,8 @@ const Home = (props) => {
         <div className="block__carousel">
           <Carousel />
         </div>
-      </WrapperSectionHome>
-      <WrapperSectionHome classN={'column'}>
+      </WrapperSection>
+      <WrapperSection classN={'column'}>
         <div className="second_block--title">
           <Title text={t('home.third_block.title')} />
 
@@ -44,15 +43,15 @@ const Home = (props) => {
         <div className="block__logos">
           <Logos />
         </div>
-      </WrapperSectionHome>
-      <WrapperSectionHome classN={'column'}>
+      </WrapperSection>
+      <WrapperSection classN={'column'}>
         <div className="first_block--title">
           <Title text={t('home.form_contact.title')} />
         </div>
         <div className="block__contact">
 
         </div>
-      </WrapperSectionHome>
+      </WrapperSection>
     </div>
   )
 }

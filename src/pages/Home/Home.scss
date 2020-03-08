@@ -3,10 +3,13 @@
 .container__wrapper--home {
   .first_block--title {
     min-width: 350px;
+    margin-left: 40px;
   }
 
   .second_block--title {
     width: 350px;
+    margin-left: 40px;
+
   }
 
   .first_block--block {
@@ -24,7 +27,7 @@
       color: $black;
     }
 
-    img {
+    .home__logos {
       max-width: 300px;
     }
   }
@@ -40,6 +43,10 @@
       color: $white;
 
     }
+  }
+
+  &.light {
+    background-color: #F5F5F5;
   }
 
   &.block {
