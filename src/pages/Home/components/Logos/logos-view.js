@@ -5,6 +5,7 @@ import { useStyles } from './logos-styles'
 import Grid from '@material-ui/core/Grid';
 import { getLogosSlider } from 'services/contentful'
 import { withTranslation } from 'react-i18next';
+import { Loading } from 'components';
 
 const LogosView = ({ i18n }) => {
   const classes = useStyles();
@@ -18,7 +19,7 @@ const LogosView = ({ i18n }) => {
       setLoading(false)
     })
   }, [])
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return <Loading />
   return (
     <div className={classes.root}>
       <Grid

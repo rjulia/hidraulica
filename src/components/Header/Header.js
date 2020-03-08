@@ -11,7 +11,6 @@ const Header = () => {
 
   const { i18n, t } = useTranslation();
   const [isMenuFlagOpen, setisMenuFlagOpen] = useState(false)
-  console.log(i18n)
   const changeLanguage = lng => {
     setisMenuFlagOpen(!isMenuFlagOpen)
     i18n.changeLanguage(lng);

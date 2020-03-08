@@ -10,7 +10,7 @@ import { NavLink as Link } from "react-router-dom";
 const Footer = ({ i18n }) => {
   const { t } = useTranslation();
   const year = _.toString(new Date().getFullYear())
-  console.log(year)
+
   return (
     <div className="footer__container">
       <Container>
@@ -36,7 +36,7 @@ const Footer = ({ i18n }) => {
               <p>{t('home.footer.copyright', { year })}</p>
             </div>
           </Grid>
-          <Grid item xs={6} sm={3} alignItems="flex-start">
+          <Grid item xs={6} sm={3}>
             <nav className="menu__footer">
               <h4>{t('home.footer.menu_button.title')}</h4>
               <ul >
@@ -58,7 +58,7 @@ const Footer = ({ i18n }) => {
               </ul>
             </nav>
           </Grid>
-          <Grid item xs={6} sm={3} alignItems="flex-start">
+          <Grid item xs={6} sm={3}>
             <nav className="menu__footer">
               <h4>{t('home.footer.legal_button.title')}</h4>
               <ul >

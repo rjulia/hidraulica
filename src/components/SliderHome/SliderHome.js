@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import { getHomeSlider } from 'services/contentful'
 import { withTranslation } from 'react-i18next';
 import './SliderHome.scss'
+import { Loading } from 'components';
+
 const SliderHome = ({ i18n }) => {
 
   const promise = getHomeSlider(i18n.language)
@@ -25,7 +27,7 @@ const SliderHome = ({ i18n }) => {
     slidesToShow: 1,
     slidesToScroll: 1
   };
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return <Loading />
   return (
     <div className="slider__container">
       <Slider {...settings}>

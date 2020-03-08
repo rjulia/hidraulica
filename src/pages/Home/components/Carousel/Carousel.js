@@ -6,6 +6,7 @@ import { getProjects } from 'services/contentful'
 import { withTranslation } from 'react-i18next';
 import './Carousel.scss'
 import Arrow from 'assets/icons/ic_arrow_down_white.svg'
+import { Loading } from 'components';
 
 const ArrowNext = (props) => {
   const { className, onClick } = props;
@@ -39,7 +40,7 @@ const Carousel = ({ i18n }) => {
       setLoading(false)
     })
   }, [])
-  console.log(sliders)
+
   const settings = {
     infinite: true,
     dots: true,
@@ -48,7 +49,7 @@ const Carousel = ({ i18n }) => {
     nextArrow: <ArrowNext />,
     prevArrow: <ArrowPrev />
   };
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return <Loading />
   return (
     <div className="carousel__projects">
       <Slider {...settings} className="carousel__container">

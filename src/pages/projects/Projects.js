@@ -5,6 +5,7 @@ import { getProjects } from '../../services/contentful'
 import { HeroImage } from "components";
 import './Projectes.scss'
 import ImgHero from "assets/images/img_slider_home_example.png";
+import { Loading } from 'components';
 
 const Projects = props => {
   const { i18n, t } = props
@@ -17,7 +18,7 @@ const Projects = props => {
       setLoading(false)
     })
   }, [])
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return <Loading />
   return (
     <div className='projects__contianer container'>
       <HeroImage
