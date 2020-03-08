@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Logo.scss"
-import LogoImg from '../../assets/icons/ic_logo_white.svg'
+import LogoImgWhite from 'assets/icons/ic_logo_white.svg'
+import LogoImgBlack from 'assets/icons/ic_logo_black.svg'
 
-const Logo = () => {
+const Logo = ({ dark }) => {
+
   return (
     <div>
-      <img src={LogoImg} alt="" />
+      <img src={dark ? LogoImgBlack : LogoImgWhite} alt="" />
     </div>
   )
 }

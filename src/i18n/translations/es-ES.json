@@ -44,7 +44,7 @@
       "remark": "* Els camps marcats son obligatoris"
     },
     "footer": {
-      "copyright": "© 2020 Tots els drets reservats",
+      "copyright": "© {{year}} Tots els drets reservats",
       "menu_button": {
         "title": "LLOC WEB",
         "home": "INICI",

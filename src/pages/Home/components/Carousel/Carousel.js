@@ -8,7 +8,7 @@ import './Carousel.scss'
 import Arrow from 'assets/icons/ic_arrow_down_white.svg'
 
 const ArrowNext = (props) => {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <span className={className} onClick={onClick}>
       <img src={Arrow} alt="" />
@@ -17,7 +17,7 @@ const ArrowNext = (props) => {
 }
 
 const ArrowPrev = (props) => {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <span className={className} onClick={onClick}>
       <img src={Arrow} alt="" />

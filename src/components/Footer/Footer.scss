@@ -1,0 +1,56 @@
+@import '../../scss/variables';
+
+.footer__container {
+  height: 325px;
+  background-color: #111;
+  padding: 78px 0;
+  width: 100%;
+  display: flex;
+
+
+  >div {
+    height: 100%;
+    display: flex;
+
+  }
+
+  .footer__box {
+    height: 100%;
+    max-width: 1440px;
+    color: $white;
+
+    .footer__address {
+      .footer__address--text {
+        color: #CFCFCF;
+        font-family: $text;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+    }
+
+    .menu__footer {
+      margin-top: 25px;
+      display: block;
+      font-family: $text;
+
+      h4 {
+        color: $main_color;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      ul li {
+        display: block;
+
+        a {
+          line-height: 2.5;
+          color: $white;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

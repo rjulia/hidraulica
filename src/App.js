@@ -5,7 +5,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Header } from "./components";
+import { Header, Footer } from "./components";
 import { Home, Projects, Services, Company, Contact } from "./pages";
 import { withTranslation } from 'react-i18next';
 import "slick-carousel/slick/slick.css";
@@ -27,6 +27,7 @@ function App({ t, i18n }) {
           <Route exact path="/contact" component={Contact} />
         </Switch>
       </Suspense>
+      <Footer />
     </Router>
 
   );
