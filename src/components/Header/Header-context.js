@@ -3,7 +3,8 @@ const MenuContext = createContext({
   services: [],
   getServicesCtx: (services) => { },
   isOpen: false,
-  toggleMenu: () => { }
+  toggleMenu: () => { },
+  onServicesMenu: () => { }
 })
 
 

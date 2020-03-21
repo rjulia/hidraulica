@@ -8,6 +8,10 @@
   height: 120px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .menu {
   display: inline-flex;
   font-family: $title;
@@ -26,6 +30,11 @@
     & .active {
       color: $main_color;
     }
+
+    & a:hover {
+      color: $main_color;
+    }
+
   }
 }
 

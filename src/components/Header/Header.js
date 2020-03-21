@@ -1,18 +1,26 @@
 import _ from 'lodash'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { withTranslation, useTranslation } from 'react-i18next';
 import { Logo, MenuFlag } from "../index";
 import CatFlag from 'assets/icons/ic_flag_catalonia.svg'
 import EspFlag from 'assets/icons/ic_flag_spain.svg'
 import './Header.scss'
-import { NavLink as Link } from "react-router-dom";
+import { NavLink as Link, useLocation, } from "react-router-dom";
 import Arrow from 'assets/icons/ic_arrow_down_blue.svg'
 import useMenu from './use-header-context';
-const Header = () => {
+
+
+const Header = (props) => {
+  console.log(props)
+  const { isServices } = props
+  let location = useLocation()
+  const [isInServices, setIsInServices] = useState(false)
 
   const { i18n, t } = useTranslation();
   const [isMenuFlagOpen, setisMenuFlagOpen] = useState(false)
-  const { toggleMenu, isOpen } = useMenu()
+
+
+  const { toggleMenu, isOpen, isOpenMenuServices } = useMenu()
   const changeLanguage = lng => {
     setisMenuFlagOpen(!isMenuFlagOpen)
     i18n.changeLanguage(lng);
@@ -28,10 +36,31 @@ const Header = () => {
   const handelMenuFlag = () => {
     setisMenuFlagOpen(!isMenuFlagOpen)
   }
+  useEffect(() => {
+    console.log(location)
+    if (_.startsWith(location.pathname, '/servicios')) {
+
+      setIsInServices(true)
+    } else {
+      setIsInServices(false)
+
+    }
+  }, [location])
+
   const handelMenuEvent = () => {
     if (isOpen) {
       toggleMenu()
     }
+  }
+
+  const handelLeave = () => {
+    console.log(isOpenMenuServices)
+    setTimeout(() => {
+      if (!isOpenMenuServices) {
+
+        toggleMenu(false)
+      }
+    }, 800);
   }
 
   return (
@@ -50,11 +79,12 @@ const Header = () => {
               to="/empresa">{t('menu.company')}</Link>
           </li>
           <li>
-            <Link
-              to='/servicios'
-              onClick={() => toggleMenu()}>
+            <div
+              onMouseEnter={() => toggleMenu(true)}
+              onMouseLeave={() => handelLeave()}
+              className={isInServices ? "active pointer" : 'pointer'}>
               {t('menu.service')}
-            </Link>
+            </div>
           </li>
           <li>
             <Link onClick={() => handelMenuEvent()}

@@ -3,17 +3,23 @@ import HeaderContext from "./Header-context";
 
 function HeaderProvider({ children }) {
 
-  const [isOpen, setisOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [isOpenMenuServices, setIsOpenMenuServices] = useState(false)
   const [services, setServices] = useState(false)
 
 
-  const toggleMenu = () => {
-    setisOpen(!isOpen)
+  const toggleMenu = (value) => {
+    setIsOpen(value)
+  }
+  const onServicesMenu = (value) => {
+    setIsOpenMenuServices(value)
   }
   const getServicesCtx = (services) => {
     setServices(services)
   }
   const contextValue = {
+    isOpenMenuServices,
+    onServicesMenu,
     services,
     getServicesCtx,
     isOpen,

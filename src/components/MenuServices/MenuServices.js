@@ -11,7 +11,7 @@ import MenuListServices from '../MenuListServices/MenuListServices';
 
 const MenuServices = props => {
   const { i18n } = props
-  const { toggleMenu, isOpen, getServicesCtx } = useMenu()
+  const { toggleMenu, isOpen, getServicesCtx, onServicesMenu } = useMenu()
   const promise = getServices(i18n.language)
   const [subservices, setSubservices] = useState([])
   const [isLoading, setLoading] = useState(true)
@@ -40,9 +40,8 @@ const MenuServices = props => {
 
   if (isLoading) return <Loading />
   return (
-    <div className={menuClass}>
+    <div className={menuClass} onClick={() => toggleMenu(false)} onMouseEnter={() => onServicesMenu(true)} >
       <div className="contianer menu-services__box">
-        <Header />
         <Grid container>
           {
             categories.map((category, idx) => (

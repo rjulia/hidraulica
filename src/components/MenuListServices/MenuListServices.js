@@ -11,7 +11,7 @@ const MenuListServices = ({ category, i18n, subservices, handelMenu }) => {
   const listItmes = subservices.filter(subservice => _.get(subservice, 'fields.category') === category)
 
   const HandleCloseMenu = () => {
-    handelMenu()
+    handelMenu(false)
   }
 
   return (
