@@ -1,0 +1,23 @@
+@import "../../scss/variables";
+
+.dropdown__container {
+  width: 250px;
+  display: inline-block;
+  padding: 20px;
+  z-index: 1;
+
+  label {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: $title;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .react-dropdown-select {
+    border: none;
+    font-family: $text;
+    color: rgba($text_color, $alpha: 0.6);
+    font-size: 14px;
+  }
+}

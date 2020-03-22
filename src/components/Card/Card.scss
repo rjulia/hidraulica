@@ -1,0 +1,36 @@
+@import "../../scss/variables";
+
+.cart__container {
+
+  figure {
+    padding: 20px;
+    border-radius: 10px;
+    background: $grey_light;
+    width: 100%;
+    margin: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .cart__box {
+    padding: 20px;
+
+    h4 {
+
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 18px;
+      font-family: $text;
+      opacity: 0.6;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: $text;
+      line-height: 28px;
+    }
+  }
+}

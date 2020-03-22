@@ -11,8 +11,6 @@ import useMenu from './use-header-context';
 
 
 const Header = (props) => {
-  console.log(props)
-  const { isServices } = props
   let location = useLocation()
   const [isInServices, setIsInServices] = useState(false)
 

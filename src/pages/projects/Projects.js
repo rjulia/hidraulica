@@ -1,23 +1,39 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import _ from 'lodash'
 import React, { useEffect, useState } from 'react';
 import { withTranslation } from 'react-i18next';
-import { getProjects } from '../../services/contentful'
-import { HeroImage } from "components";
+import { getProjects, getServices } from '../../services/contentful'
+import { HeroImage, Filter, Card } from "components";
 import './Projectes.scss'
-import ImgHero from "assets/images/img_slider_home_example.png";
+import ImgHero from "assets/images/img_projectes.png";
 import { Loading } from 'components';
 
 const Projects = props => {
   const { i18n, t } = props
   const promise = getProjects(i18n.language)
-  const [posts, setPosts] = useState([])
+  const promiseServices = getServices(i18n.language)
+
+  const [projects, setProjects] = useState([])
   const [isLoading, setLoading] = useState(true)
+  const [services, setServices] = useState([])
+
   useEffect(() => {
-    promise.then(projects => {
-      setPosts(projects)
-      setLoading(false)
-    })
+    setLoading(true)
+
+    Promise.all([promise, promiseServices])
+      .then(data => {
+        setProjects(data[0])
+        setServices(data[1])
+      }).finally(() => {
+        setLoading(false)
+      })
   }, [])
+
+  const filterProps = {
+    services,
+    projects,
+    ...props
+  }
   if (isLoading) return <Loading />
   return (
     <div className='projects__contianer container'>
@@ -26,9 +42,18 @@ const Projects = props => {
         image={ImgHero}
 
       />
-      {
-        posts && "hay posts"
-      }
+      <Filter {...filterProps} />
+      <div className="row">
+        {
+          projects && _.map(projects, project => (
+            <div className="col-12 col-md-4" key={project.sys.id} >
+              <Card project={project} />
+
+            </div>
+          ))
+        }
+
+      </div>
     </div>
   )
 }
