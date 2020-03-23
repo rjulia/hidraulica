@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import './MenuServices.scss'
-import { Header, Loading } from "components";
+import { Loading } from "components";
 import classNames from 'classnames'
 import { getServices } from 'services/contentful'
 import { withTranslation } from 'react-i18next';
