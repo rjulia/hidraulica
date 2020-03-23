@@ -12,7 +12,7 @@ import Arrow from "assets/icons/ic_arrow_down_white.svg";
 const Home = (props) => {
   const { t } = props
   return (
-    <div className="container__fluid">
+    <div className="container__fluid menu-on-top">
       <div className="container">
         <SliderHome />
       </div>
@@ -20,8 +20,9 @@ const Home = (props) => {
         <div className="first_block--title col-12 col-md-3">
           <Title text={t('home.first_block.title')} />
         </div>
-        <div className="first_block--block">
-          <p className='first_block--description'>{t('home.first_block.description')}</p>
+        <div className="first_block--block col-12 col-9">
+          <p className='first_block--description'
+            dangerouslySetInnerHTML={{ __html: t('home.first_block.description') }} />
           <p className='first_block--subtitulo'>{t('home.first_block.subtitle')}</p>
           <div>
             <img className='home__logos' src={ImgLogos} alt="" />
@@ -33,7 +34,7 @@ const Home = (props) => {
           <Title blue text={t('home.second_block.title')} />
           <Link className="first_block--link" to="/projectos">{t('home.second_block.button')} <img src={Arrow} alt="" /> </Link>
         </div>
-        <div className="block__carousel">
+        <div className="block__carousel col-12">
           <Carousel />
         </div>
       </WrapperSection>
@@ -50,7 +51,7 @@ const Home = (props) => {
         <div className="first_block--title col-12 col-md-3">
           <Title text={t('home.form_contact.title')} />
         </div>
-        <div className="block__contact">
+        <div className="block__contact col-12 col-md-9">
 
         </div>
       </WrapperSection>

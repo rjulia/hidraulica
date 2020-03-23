@@ -13,30 +13,17 @@ const Footer = ({ i18n }) => {
 
   return (
     <div className="footer__container">
-      <Container>
-        <Grid
-          container
-          className="footer__box"
-          direction="row"
-          justify="center"
-          alignItems="flex-start"
-          spacing={3}>
-
-          <Grid
-            container
-            style={{ height: '100%' }}
-            direction="column"
-            justify="space-between"
-            alignItems="flex-start"
-            item xs={6} sm={6}>
-            <Logo dark />
-            <div className="footer__address">
+      <div className='footer__box container'>
+        <div className="row">
+          <div className='col-md-3 col-12'>
+            <Logo className='logo_footer' dark />
+            <div className="footer__address d-none">
               <p className="footer__address--text">Pol. Ind. Can Verdalet · C/A Nau A2 · 08490 Tordera · Barcelona  <br />
                 Tel: 93 764 20 82 - Fax: 93 764 20 78</p>
               <p>{t('home.footer.copyright', { year })}</p>
             </div>
-          </Grid>
-          <Grid item xs={6} sm={3}>
+          </div>
+          <div className="col-6 col-md-6">
             <nav className="menu__footer">
               <h4>{t('home.footer.menu_button.title')}</h4>
               <ul >
@@ -57,8 +44,8 @@ const Footer = ({ i18n }) => {
                 </li>
               </ul>
             </nav>
-          </Grid>
-          <Grid item xs={6} sm={3}>
+          </div>
+          <div className='col-6 col-md-6'>
             <nav className="menu__footer">
               <h4>{t('home.footer.legal_button.title')}</h4>
               <ul >
@@ -73,9 +60,14 @@ const Footer = ({ i18n }) => {
                 </li>
               </ul>
             </nav>
-          </Grid>
-        </Grid>
-      </Container>
+          </div>
+          <div className="footer__address p-3 d-sm-none">
+            <p className="footer__address--text">Pol. Ind. Can Verdalet · C/A Nau A2 · 08490 Tordera · Barcelona  <br />
+                Tel: 93 764 20 82 - Fax: 93 764 20 78</p>
+            <p className='copyright'>{t('home.footer.copyright', { year })}</p>
+          </div>
+        </div>
+      </div>
     </div>
 
   )

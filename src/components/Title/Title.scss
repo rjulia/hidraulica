@@ -1,17 +1,19 @@
 @import '../../scss/variables';
+@import '../../scss/mediaqueries';
 
 .title__group {
   width: auto;
   display: block;
   position: relative;
   padding-bottom: 14px;
+  margin-left: 19px;
 
   h2 {
     font-family: $title;
     color: $main_color;
-    font-size: 28px;
-    line-height: 34px;
-    letter-spacing: 1.4px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.8px;
     font-weight: 600;
     margin-bottom: 0;
   }
@@ -54,6 +56,15 @@
       font-size: 16px;
       line-height: 32px;
 
+    }
+  }
+
+  @include desktop {
+    h2 {
+
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 1.4px;
     }
   }
 }

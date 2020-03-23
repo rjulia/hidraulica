@@ -1,3 +1,9 @@
+@import '../../scss/mediaqueries';
+
 .container__wrapper--home {
-  padding: 100px 0;
+  padding: 40px 0;
+
+  @include desktop {
+    padding: 100px 0;
+  }
 }

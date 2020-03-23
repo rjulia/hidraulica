@@ -1,17 +1,21 @@
 @import '../../scss/variables';
+@import '../../scss/mediaqueries';
 
 .footer__container {
   min-height: 370px;
   background-color: #111;
-  padding: 78px 0;
+  padding: 20px 0 78px;
   width: 100%;
-  display: flex;
-
 
   >div {
     height: 100%;
     display: flex;
+  }
 
+  .logo_footer {
+    img {
+      width: 80%;
+    }
   }
 
   .footer__box {
@@ -28,12 +32,19 @@
       }
     }
 
+    .copyright {
+      font-size: 10px;
+      font-weight: 600;
+    }
+
     .menu__footer {
       margin-top: 25px;
       display: block;
       font-family: $text;
 
       h4 {
+        font-size: 12px;
+        line-height: 18px;
         color: $main_color;
       }
 
@@ -47,6 +58,33 @@
         a {
           line-height: 2.5;
           color: $white;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    padding: 78px 0;
+
+    .menu__footer {
+      margin-top: 25px;
+
+      h4 {
+        line-height: 18px;
+        color: $main_color;
+        font-size: 24px;
+      }
+
+      ul {
+        padding: 0;
+      }
+
+      ul li {
+        display: block;
+
+        a {
           font-size: 14px;
           font-weight: 600;
         }

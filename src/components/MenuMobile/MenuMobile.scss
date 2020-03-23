@@ -1,0 +1,27 @@
+@import '../../scss/variables';
+@import '../../scss/mediaqueries';
+
+
+.menu-mobile__container {
+  display: block;
+  width: 100vw;
+  height: 80px;
+  display: block;
+  position: fixed;
+  z-index: 10000;
+  padding: 20px;
+  top: 0;
+  background-color: $white;
+
+  .logo {
+    max-width: 80%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include desktop {
+    display: none;
+  }
+}

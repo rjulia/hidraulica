@@ -15,6 +15,8 @@ export { default as Loading } from './Loading/Loading';
 export { default as Logo } from './Logo/Logo';
 export { default as MenuFlag } from './MenuFlags/MenuFlags';
 export { default as MenuServices } from './MenuServices/MenuServices';
+export { default as MenuMobile } from './MenuMobile/MenuMobile';
+
 
 export { default as ServiceDetail } from './ServiceDetail/ServiceDetail';
 export { default as SliderHome } from './SliderHome/SliderHome';

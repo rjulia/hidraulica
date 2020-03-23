@@ -27,13 +27,15 @@ const SliderHome = ({ i18n }) => {
     slidesToShow: 1,
     slidesToScroll: 1
   };
+  console.log(sliders)
   if (isLoading) return <Loading />
   return (
     <div className="slider__container">
       <Slider {...settings}>
         {sliders.map(slider => (
           <div key={slider.sys.id}>
-            <img src={slider.fields.image.fields.file.url} alt="" />
+            <img className='d-md-none' src={slider.fields.mobileImage.fields.file.url} alt="" />
+            <img className="d-none d-md-block" src={slider.fields.image.fields.file.url} alt="" />
             <h2 className="title__slider">{slider.fields.title}</h2>
             <p className="subtitle__slider">{slider.fields.subtitle}</p>
             <p className="author">author: <span>{slider.fields.author}</span> de la web: <span>{slider.fields.sponsor}</span> </p>

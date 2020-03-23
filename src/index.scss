@@ -1,4 +1,5 @@
 @import './scss/variables';
+@import './scss/mediaqueries';
 
 body {
   margin: 0;
@@ -9,6 +10,16 @@ body {
 
 .container__fluid {
   width: 100%;
+
+  &.menu-on-top {
+    margin-top: 80px;
+  }
+
+  @include desktop {
+    &.menu-on-top {
+      margin-top: 0;
+    }
+  }
 }
 
 

@@ -6,8 +6,8 @@ import {
   Route,
 } from "react-router-dom";
 import HeaderProvider from "components/Header/Header-provider";
-import { Header, Footer, MenuServices } from "./components";
-import { Home, Projects, ServicesPages, Company, Contact, Service } from "./pages";
+import { Header, Footer, MenuServices, MenuMobile } from "./components";
+import { Home, Projects, ServicesPages, Company, Contact, Service, } from "./pages";
 import { withTranslation } from 'react-i18next';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,12 +17,12 @@ function App({ t, i18n }) {
   return (
     <HeaderProvider>
       <Router>
+        <MenuMobile />
         <Header />
         <Suspense fallback="loading">
           <Switch>
             <Route exact path="/" component={() => <Home />} />
             <Route exact path="/empresa" component={Company} />
-            <Route exact path="/servicios" component={ServicesPages} />
             <Route exact path="/servicios/:slug" component={Service} />
             <Route exact path="/projectos" component={() => <Projects i18n={i18n} />} />
             <Route exact path="/contact" component={Contact} />
