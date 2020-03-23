@@ -3,7 +3,7 @@ import './form.scss'
 import { Formik } from 'formik';
 import { Input } from "components";
 
-const Form = (props) => {
+const FormContact = (props) => {
   const { t } = props
   return (
     <div className="from__container">
@@ -58,14 +58,6 @@ const Form = (props) => {
                 />
               </div>
             </div>
-
-            <input
-              type="text"
-              onChange={props.handleChange}
-              onBlur={props.handleBlur}
-              value={props.values.name}
-              name="name"
-            />
             {props.errors.name && <div id="feedback">{props.errors.name}</div>}
             <button type="submit">Submit</button>
           </form>
@@ -75,4 +67,4 @@ const Form = (props) => {
   )
 }
 
-export default Form
+export default FormContact

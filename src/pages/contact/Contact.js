@@ -1,7 +1,7 @@
 import React from 'react'
 import { withTranslation } from 'react-i18next';
 import { HeroImage, WrapperSection, Title } from "components";
-import Form from "components/Form/";
+import FormContactcomponents/FormContact/FormContactContact";
 import ImgHero from "assets/images/img_slider_home_example.png";
 import './Contact.scss'
 
@@ -27,7 +27,7 @@ const Contact = (props) => {
       <WrapperSection classN={'column light'}>
         <div className="second_block--title">
           <Title text={t('home.form_contact.title')} />
-          <Form  {...props} />
+          <FormContact  {...props} />
         </div>
 
       </WrapperSection>
