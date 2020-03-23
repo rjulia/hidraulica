@@ -1,8 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import _ from 'lodash'
 import React, { useEffect, useState } from 'react';
-import moment from 'moment';
-
 import { withTranslation } from 'react-i18next';
 import { getProjects, getServices, filterProjects } from '../../services/contentful'
 import { HeroImage, Filter, Card } from "components";

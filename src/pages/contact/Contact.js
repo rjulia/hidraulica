@@ -1,13 +1,13 @@
 import React from 'react'
 import { withTranslation } from 'react-i18next';
-import { HeroImage, WrapperSection, Title } from "components";
+import { HeroImage, WrapperSection, Title, Form } from "components";
 import ImgHero from "assets/images/img_slider_home_example.png";
 import './Contact.scss'
 
 const Contact = (props) => {
   const { t } = props
   return (
-    <div className="container contact__container">
+    <div className="container-fluid contact__container">
       <HeroImage
         title={t('contact.title')}
         image={ImgHero}
@@ -23,10 +23,10 @@ const Contact = (props) => {
           </div>
         </div>
       </WrapperSection>
-      <WrapperSection classN={'column'}>
+      <WrapperSection classN={'column light'}>
         <div className="second_block--title">
           <Title text={t('home.form_contact.title')} />
-
+          <Form  {...props} />
         </div>
 
       </WrapperSection>

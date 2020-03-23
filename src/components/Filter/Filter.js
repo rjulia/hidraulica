@@ -1,5 +1,4 @@
-import _ from 'lodash'
-import React, { useState } from 'react'
+import React from 'react'
 import moment from 'moment';
 import "./Filter.scss";
 import { DropDown } from "components";
@@ -8,16 +7,9 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-const Filter = ({ projects, services, handleChage, filterInitial, ...others }) => {
+const Filter = ({ handleChage, filterInitial }) => {
 
-  console.log(filterInitial)
   const { t } = useTranslation()
-  const servicesFilter = _.map(services, service => {
-    return {
-      value: _.get(service, 'fields.slug'),
-      label: _.get(service, 'fields.title')
-    }
-  })
 
   const category = [
 
@@ -61,8 +53,6 @@ const Filter = ({ projects, services, handleChage, filterInitial, ...others }) =
       value: 'otras'
     },
   ]
-
-  const [startDate, setStartDate] = useState(new Date());
   moment.locale();
   return (
     <div className="filter__container">

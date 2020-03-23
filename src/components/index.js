@@ -7,7 +7,11 @@ export { default as Filter } from './Filter/Filter';
 export { default as Footer } from './Footer/Footer';
 export { default as Header } from './Header/Header';
 export { default as HeroImage } from './HeroImage/HeroImages';
+export { default as Input } from './Input/Input';
+
 export { default as ImageFrame } from './ImageFrame/ImageFrame';
+export { default as Form } from './Form/Form';
+
 export { default as Loading } from './Loading/Loading';
 export { default as Logo } from './Logo/Logo';
 export { default as MenuFlag } from './MenuFlags/MenuFlags';
