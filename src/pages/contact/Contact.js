@@ -1,7 +1,7 @@
 import React from 'react'
 import { withTranslation } from 'react-i18next';
-import { HeroImage, WrapperSection, Title } from "components/index";
-import Form from "components/Form/Form";
+import { HeroImage, WrapperSection, Title } from "components";
+import Form from "components/Form/";
 import ImgHero from "assets/images/img_slider_home_example.png";
 import './Contact.scss'
 
