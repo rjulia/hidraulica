@@ -36,6 +36,17 @@
     }
   }
 
+  &.blue {
+    h2 {
+      color: $main-color;
+    }
+
+    span {
+      background: linear-gradient(to right, #96daf3 0%, #000 100%);
+
+    }
+  }
+
   &.small {
     padding-bottom: 6px;
 

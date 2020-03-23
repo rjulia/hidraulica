@@ -11,6 +11,20 @@
 
   }
 
+  .first_block--link {
+    color: $white;
+    right: 0;
+    top: 0;
+    position: absolute;
+    font-family: $title;
+    font-size: 14px;
+    font-weight: 600;
+
+    img {
+      transform: rotate(-90deg);
+    }
+  }
+
   .first_block--block {
     .first_block--description {
       font-size: 18px;

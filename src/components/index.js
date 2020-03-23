@@ -10,7 +10,8 @@ export { default as HeroImage } from './HeroImage/HeroImages';
 export { default as Input } from './Input/Input';
 
 export { default as ImageFrame } from './ImageFrame/ImageFrame';
-export { default as Form } from './Form/Form';
+
+export { default as Form } from './Form/Form'
 
 export { default as Loading } from './Loading/Loading';
 export { default as Logo } from './Logo/Logo';
