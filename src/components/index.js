@@ -11,8 +11,6 @@ export { default as Input } from './Input/Input';
 
 export { default as ImageFrame } from './ImageFrame/ImageFrame';
 
-export { default as Form } from './Form/Form'
-
 export { default as Loading } from './Loading/Loading';
 export { default as Logo } from './Logo/Logo';
 export { default as MenuFlag } from './MenuFlags/MenuFlags';

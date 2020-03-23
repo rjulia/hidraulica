@@ -1,4 +1,5 @@
 @import '../../scss/variables';
+@import '../../scss/mediaqueries';
 
 .container_menu {
   flex-direction: row;
@@ -46,3 +47,5 @@
     margin-right: 10px;
   }
 }
+
+@include desktop {}
