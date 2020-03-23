@@ -1,0 +1,24 @@
+@import '../../scss/variables';
+
+.container__fluid {
+  &.services {
+
+    .offer {
+      column-count: 2;
+      color: $white;
+
+      .offer-parf {
+        display: flex;
+        flex-direction: row;
+        font-size: 22px;
+        line-height: 28px;
+        font-family: $text;
+        font-weight: 600;
+
+        img {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

@@ -20,7 +20,6 @@ const getService = (language, slug) =>
       'fields.slug': slug,
       content_type: 'subservices',
       locale: language,
-      order: 'sys.createdAt'
     })
     .then(response => response.items)
 

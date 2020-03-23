@@ -7,6 +7,7 @@ import { HeroImage, Filter, Card } from "components";
 import './Projectes.scss'
 import ImgHero from "assets/images/img_projectes.png";
 import { Loading } from 'components';
+
 const initialStateFilter = {
   category: '',
   location: '',

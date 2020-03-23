@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import HeaderProvider from "components/Header/Header-provider";
 import { Header, Footer, MenuServices, MenuMobile } from "./components";
-import { Home, Projects, ServicesPages, Company, Contact, Service, } from "./pages";
+import { Home, Projects, ServicesPages, Company, Contact, Service } from "./pages";
 import { withTranslation } from 'react-i18next';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
