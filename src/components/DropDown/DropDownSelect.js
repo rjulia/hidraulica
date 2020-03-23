@@ -1,24 +1,33 @@
-import React from 'react'
+import _ from 'lodash'
+import React, { useEffect, useState } from 'react'
 import { Select } from 'react-dropdown-select'
 import PropTypes from 'prop-types';
 import './DropDownSelect.scss'
 
 
 
-const DropDownSelect = ({ options, title }) => {
+const DropDownSelect = ({ options, title, keyValue, handleChage, value }) => {
 
+  const [initialValue, setinitialValue] = useState([])
+  useEffect(() => {
+    console.log(value)
+    if (_.isEmpty(value)) {
+      console.log(value)
+      setinitialValue([])
+    } else {
+      setinitialValue([value])
+    }
 
-  const handleChage = (values) => {
-    console.log(values)
-  }
-
+  }, [value])
   return (
     <div className="dropdown__container">
       <label htmlFor={title}>{title}</label>
       <Select
         options={options}
+        clearable={true}
+
         name={title}
-        onChange={(values) => handleChage(values)}
+        onChange={(values) => handleChage(values, keyValue)}
       />
     </div>
   )

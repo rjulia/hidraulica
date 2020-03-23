@@ -10,6 +10,21 @@
     "project": "proyectos",
     "contact": "contacto"
   },
+  "constants": {
+    "cities": {
+      "bcn": "Barcelona",
+      "gi": "Gerona",
+      "le": "Lerida",
+      "ta": "Tarragona",
+      "others": "Otras localidades"
+    },
+    "category": {
+      "instalacion": "instalacion",
+      "mantenimiento": "mantenimiento",
+      "servicio": "servicio",
+      "alquiler": "alquiler"
+    }
+  },
   "home": {
     "first_block": {
       "title": "Sobre nosaltres",

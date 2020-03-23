@@ -1,3 +1,6 @@
+import _ from 'lodash'
+import moment from 'moment';
+
 const client = require('contentful').createClient({
   space: process.env.REACT_APP_SPACE,
   accessToken: process.env.REACT_APP_ACCESS_TOKEN
@@ -11,6 +14,7 @@ const getServices = (language) =>
       order: 'sys.createdAt'
     })
     .then(response => response.items)
+
 const getService = (language, slug) =>
   client
     .getEntries({
@@ -28,6 +32,22 @@ const getProjects = (language) =>
       locale: language
     })
     .then(response => response.items)
+
+const filterProjects = (language, options = {}) => {
+
+  const { location, category, date } = options
+  console.log(options)
+  return client
+    .getEntries({
+      'fields.category': category,
+      'fields.location': location,
+      'fields.executionDate[lte]': moment(date).format("YYYY-MM-DD"),
+      content_type: 'project',
+      locale: language
+    })
+    .then(response => response.items)
+
+}
 
 const getSingleProject = slug =>
   client
@@ -59,4 +79,4 @@ const getLogosSlider = (language) =>
     })
 
 
-export { getProjects, getSingleProject, getHomeSlider, getLogosSlider, getServices, getService }
+export { getProjects, getSingleProject, getHomeSlider, getLogosSlider, getServices, getService, filterProjects }

@@ -1,8 +1,7 @@
 import React from 'react'
 import { withTranslation } from 'react-i18next';
-import { SliderHome, Button, Title } from 'components';
+import { SliderHome, Button, Title, WrapperSection } from 'components';
 import './Home.scss'
-import { WrapperSection } from 'components/';
 import Logos from "./components/Logos/logos-view";
 import ImgLogos from "assets/images/img_home_homologaciones.png"
 import Carousel from './components/Carousel/Carousel';
@@ -15,7 +14,7 @@ const Home = (props) => {
         <SliderHome />
       </div>
       <WrapperSection classN={'block'}>
-        <div className="first_block--title">
+        <div className="first_block--title col-12 col-md-3">
           <Title text={t('home.first_block.title')} />
         </div>
         <div className="first_block--block">
@@ -27,7 +26,7 @@ const Home = (props) => {
         </div>
       </WrapperSection>
       <WrapperSection classN={'column dark'}>
-        <div className="first_block--title">
+        <div className="first_block--title col-12 col-md-3">
           <Title dark text={t('home.second_block.title')} />
           <Button />
         </div>
@@ -45,7 +44,7 @@ const Home = (props) => {
         </div>
       </WrapperSection>
       <WrapperSection classN={'column'}>
-        <div className="first_block--title">
+        <div className="first_block--title col-12 col-md-3">
           <Title text={t('home.form_contact.title')} />
         </div>
         <div className="block__contact">

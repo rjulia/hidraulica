@@ -35,7 +35,6 @@ const Header = (props) => {
     setisMenuFlagOpen(!isMenuFlagOpen)
   }
   useEffect(() => {
-    console.log(location)
     if (_.startsWith(location.pathname, '/servicios')) {
 
       setIsInServices(true)
