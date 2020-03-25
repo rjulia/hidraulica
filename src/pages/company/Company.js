@@ -18,7 +18,7 @@ const Company = (props) => {
         />
       </div>
       <WrapperSection classN={'block'}>
-        <div className="first_block--title">
+        <div className="first_block--title col-12 col-md-3">
           <Title text={t('company.first_block.title')} />
         </div>
         <div className="first_block--block">
@@ -26,10 +26,10 @@ const Company = (props) => {
         </div>
       </WrapperSection>
       <WrapperSection classN={'block light'}>
-        <div className="first_block--title">
+        <div className="first_block--title col-12 col-md-3">
           <Title text={t('company.second_block.title')} />
         </div>
-        <div className="first_block--block">
+        <div className="first_block--block col-12 col-md-9">
           <p className='first_block--description'>{t('company.second_block.description')}</p>
           <ImageFrame img={Factory} style={{ marginTop: ' 50px' }} />
         </div>

@@ -20,7 +20,7 @@ const Home = (props) => {
         <div className="first_block--title col-12 col-md-3">
           <Title text={t('home.first_block.title')} />
         </div>
-        <div className="first_block--block col-12 col-9">
+        <div className="first_block--block col-12 col-md-9">
           <p className='first_block--description'
             dangerouslySetInnerHTML={{ __html: t('home.first_block.description') }} />
           <p className='first_block--subtitulo'>{t('home.first_block.subtitle')}</p>

@@ -15,7 +15,7 @@ const Footer = ({ i18n }) => {
     <div className="footer__container">
       <div className='footer__box container'>
         <div className="row">
-          <div className='col-md-3 col-12'>
+          <div className='col-md-6 col-12'>
             <Logo className='logo_footer' dark />
             <div className="footer__address d-none">
               <p className="footer__address--text">Pol. Ind. Can Verdalet · C/A Nau A2 · 08490 Tordera · Barcelona  <br />
@@ -23,7 +23,7 @@ const Footer = ({ i18n }) => {
               <p>{t('home.footer.copyright', { year })}</p>
             </div>
           </div>
-          <div className="col-6 col-md-6">
+          <div className="col-6 col-md-3">
             <nav className="menu__footer">
               <h4>{t('home.footer.menu_button.title')}</h4>
               <ul >
@@ -45,7 +45,7 @@ const Footer = ({ i18n }) => {
               </ul>
             </nav>
           </div>
-          <div className='col-6 col-md-6'>
+          <div className='col-6 col-md-3'>
             <nav className="menu__footer">
               <h4>{t('home.footer.legal_button.title')}</h4>
               <ul >
