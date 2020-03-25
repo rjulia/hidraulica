@@ -1,13 +1,14 @@
 import React from 'react'
 import './Title.scss'
 import classNames from 'classnames'
-const Title = ({ text, dark, small, blue }) => {
+const Title = ({ text, dark, small, blue, ...others }) => {
 
   let titleClass = classNames({
     "title__group": true,
     'dark': dark,
     'small': small,
-    'blue': blue
+    'blue': blue,
+    ...others
   })
 
   return (

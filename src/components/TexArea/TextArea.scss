@@ -1,0 +1,25 @@
+@import '../../scss//variables';
+
+
+.input__container {
+  background-color: $white;
+  margin-bottom: 20px;
+  padding: 20px;
+  width: 100%;
+
+  label {
+    font-size: 14px;
+    font-family: $text;
+    line-height: 18px;
+    font-weight: 600;
+    display: block;
+  }
+
+  textarea {
+    border: none;
+    width: 100%;
+    resize: none;
+    outline: none;
+    overflow: auto;
+  }
+}

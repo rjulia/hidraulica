@@ -1,12 +1,12 @@
 import React from 'react'
 import './form.scss'
 import { Formik } from 'formik';
-import { Input } from "components";
+import { Input, TextArea } from "components";
 
 const FormContact = (props) => {
   const { t } = props
   return (
-    <div className="from__container">
+    <div className="form__container">
       <Formik
         initialValues={{ name: 'jared' }}
         onSubmit={(values, actions) => {
@@ -47,11 +47,13 @@ const FormContact = (props) => {
                 />
               </div>
             </div>
-            <div className="rox">
+            <div className="row">
               <div className="col-12">
-                <Input
+                <TextArea
                   label={t('home.form_contact.message.label')}
                   value={''}
+                  row={'3'}
+                  col={''}
                   type={'text'}
                   handleChange={props.handleChange}
                   placeholder={t('home.form_contact.message.placeholder')}
@@ -59,7 +61,10 @@ const FormContact = (props) => {
               </div>
             </div>
             {props.errors.name && <div id="feedback">{props.errors.name}</div>}
-            <button type="submit">Submit</button>
+            <div className="form__button__box">
+              <p>{t('home.form_contact.remark')}</p>
+              <button className="buttton form__button" type="submit">Submit</button>
+            </div>
           </form>
         )}
       </Formik>

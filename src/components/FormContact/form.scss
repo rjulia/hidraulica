@@ -1,0 +1,22 @@
+.form__container {
+  margin-top: 60px;
+
+  input {
+    border: none;
+  }
+
+  .form__button__box {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 54px;
+  }
+
+  .form__button {
+    width: 219px;
+    height: 62px;
+    background: rgba(17, 17, 17, 0.2);
+    border-radius: 8px;
+  }
+}
