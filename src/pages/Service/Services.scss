@@ -6,6 +6,8 @@
     .offer {
       column-count: 2;
       color: $white;
+      margin-top: 50px;
+      padding: 0 0 0 60px;
 
       .offer-parf {
         display: flex;
@@ -14,11 +16,42 @@
         line-height: 28px;
         font-family: $text;
         font-weight: 600;
+        align-items: flex-start;
+        margin-bottom: 30px;
 
         img {
           margin-right: 15px;
+          padding-top: 5px;
         }
       }
     }
+
+    .services_outstanding {
+      background: #10ACE4;
+      height: auto;
+
+      .container {
+        min-height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        max-width: 840px;
+        margin: 0 auto;
+
+        p {
+          font-family: $title;
+          font-size: 22px;
+          line-height: 34px;
+          letter-spacing: 1.1px;
+          color: $white;
+          text-align: center;
+          font-weight: 600;
+          margin: 0;
+        }
+
+      }
+    }
   }
+
 }

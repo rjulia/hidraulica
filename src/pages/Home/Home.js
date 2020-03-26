@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { withTranslation } from 'react-i18next';
-import { SliderHome, Button, Title, WrapperSection } from 'components';
+import { SliderHome, Button, Title, WrapperSection, } from 'components';
+import FormContact from "components/FormContact/FormContact";
 import './Home.scss'
 import Logos from "./components/Logos/logos-view";
 import ImgLogos from "assets/images/img_home_homologaciones.png"
@@ -47,12 +48,12 @@ const Home = (props) => {
           <Logos />
         </div>
       </WrapperSection>
-      <WrapperSection classN={'column'}>
-        <div className="first_block--title col-12 col-md-3">
+      <WrapperSection classN={'column light'}>
+        <div className="first_block--title col-12 col-md-12">
           <Title text={t('home.form_contact.title')} />
         </div>
-        <div className="block__contact col-12 col-md-9">
-
+        <div className="block__contact col-12 col-md-12">
+          <FormContact  {...props} />
         </div>
       </WrapperSection>
     </div>

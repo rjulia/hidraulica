@@ -12,13 +12,14 @@
 
 
   .first_block--link {
-    color: $white;
+    color: $text_color;
     right: 0;
     top: 0;
     position: absolute;
     font-family: $title;
     font-size: 14px;
     font-weight: 600;
+
 
     img {
       transform: rotate(-90deg);
@@ -51,6 +52,10 @@
 
   &.dark {
     background-color: $black;
+
+    .first_block--link {
+      color: $white;
+    }
 
     .first_block--description {
       color: $white;

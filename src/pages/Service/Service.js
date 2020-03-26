@@ -1,4 +1,7 @@
 import _ from 'lodash'
+import { Link } from "react-router-dom";
+import Arrow from "assets/icons/ic_arrow_down_black.svg";
+
 import React, { useEffect, useState } from 'react'
 import './Services.scss'
 import { SliderHome, Title, WrapperSection, HeroImage } from 'components';
@@ -48,7 +51,7 @@ const Service = (props) => {
       </WrapperSection>
       <WrapperSection classN={'column dark'}>
         <div className="first_block--title col-12">
-          <Title text={t('home.first_block.title')} />
+          <Title blue text={t('home.first_block.title')} />
         </div>
         <div className="first_block--block offer col-12">
           {
@@ -61,10 +64,16 @@ const Service = (props) => {
         </div>
 
       </WrapperSection>
+      <div className="services_outstanding">
+        <div className="container">
+          <p>{_.get(service, 'fields.textoDestacado')}</p>
+        </div>
+      </div>
       <WrapperSection classN={'column'}>
-
-      </WrapperSection>
-      <WrapperSection classN={'column'}>
+        <div className="first_block--title col-12 col-md-12">
+          <Title text={t('services.third_block.title')} />
+          <Link className="first_block--link" to="/projectos">{t('services.third_block.button')} <img src={Arrow} alt="" /> </Link>
+        </div>
 
       </WrapperSection>
     </div>
