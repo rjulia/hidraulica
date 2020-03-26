@@ -27,6 +27,8 @@
   }
 
   .first_block--block {
+    padding: 10px;
+
     .first_block--description {
       font-size: 14px;
       line-height: 22px;
@@ -71,6 +73,7 @@
     .container {
       display: flex;
       flex-direction: column;
+      padding: 15px;
     }
   }
 
@@ -98,10 +101,13 @@
       .container {
         display: flex;
         flex-direction: row;
+
       }
     }
 
     .first_block--block {
+      padding: 0;
+
       .first_block--description {
         font-size: 18px;
         line-height: 28px;

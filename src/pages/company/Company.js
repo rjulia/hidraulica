@@ -9,7 +9,7 @@ const Company = (props) => {
   const { t } = props
 
   return (
-    <div className="container-fluid company__container">
+    <div className="container-fluid company__container menu-on-top">
 
       <div className="container ">
         <HeroImage

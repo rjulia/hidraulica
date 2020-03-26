@@ -4,22 +4,66 @@
 
 .menu-mobile__container {
 
-  display: block;
+  display: none;
   width: 100vw;
   height: 100vh;
-  display: block;
   position: fixed;
   z-index: 9999;
-
   top: 0;
-  background-color: rgba($color: $black, $alpha: 0.7);
+  background-color: rgba($color: $black, $alpha: 0.0);
+  transition: all 2s;
+
+
 
   .menu-mobile__box {
-    height: 500px;
+    height: 0px;
     background-color: $white;
     border-radius: 20px;
     padding: 20px;
     padding-top: 80px;
+
+    .menu {
+
+      padding: 0;
+      margin: 0 0 50px;
+
+
+      li {
+        height: 56px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        font-family: $title;
+        font-weight: 600;
+        border-bottom: 2px solid rgba($color: #000000, $alpha: .05%);
+
+        &:last-child {
+          border: none;
+        }
+
+        img {
+          transform: rotate(-90deg);
+        }
+
+        p {
+          text-size-adjust: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &.open {
+    height: 100vh;
+    display: block;
+    background-color: rgba($color: $black, $alpha: 0.7);
+
+    .menu-mobile__box {
+      height: 500px;
+    }
   }
 
   .menu-mobile__flags {

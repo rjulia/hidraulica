@@ -70,24 +70,27 @@ const Projects = props => {
   }
   if (isLoading) return <Loading />
   return (
-    <div className='projects__contianer container'>
-      <HeroImage
-        title={t('projects.title')}
-        image={ImgHero}
+    <div className='projects__contianer container-fluid menu-on-top'>
+      <div className="container ">
 
-      />
-      <Filter {...filterProps} />
-      <div onClick={() => cleanFilter()}>Clean</div>
-      <div className="row">
-        {
-          projectsFiltered && _.map(projectsFiltered, project => (
-            <div className="col-12 col-md-4" key={project.sys.id} >
-              <Card project={project} />
+        <HeroImage
+          title={t('projects.title')}
+          image={ImgHero}
 
-            </div>
-          ))
-        }
+        />
+        <Filter {...filterProps} />
+        <div onClick={() => cleanFilter()}>Clean</div>
+        <div className="row">
+          {
+            projectsFiltered && _.map(projectsFiltered, project => (
+              <div className="col-12 col-md-4" key={project.sys.id} >
+                <Card project={project} />
 
+              </div>
+            ))
+          }
+
+        </div>
       </div>
     </div>
   )

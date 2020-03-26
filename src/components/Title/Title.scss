@@ -6,7 +6,6 @@
   display: block;
   position: relative;
   padding-bottom: 14px;
-  margin-left: 19px;
 
   h2 {
     font-family: $title;
@@ -60,6 +59,8 @@
   }
 
   @include desktop {
+    margin-left: 19px;
+
     h2 {
 
       font-size: 28px;

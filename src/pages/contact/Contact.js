@@ -12,7 +12,7 @@ import {
 const Contact = (props) => {
   const { t } = props
   return (
-    <div className="container-fluid contact__container">
+    <div className="container-fluid contact__container menu-on-top">
       <div className="container ">
 
         <HeroImage

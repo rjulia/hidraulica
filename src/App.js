@@ -14,9 +14,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 function App({ t, i18n }) {
-  const [isOpenMenu, setIsOpenMenu] = useState(true)
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
 
-  const toggleMenuMobile = () => {
+  const toggleMenuMobile = (e) => {
+    e.preventDefault()
     setIsOpenMenu(!isOpenMenu)
   }
 
@@ -27,8 +28,8 @@ function App({ t, i18n }) {
   return (
     <HeaderProvider>
       <Router>
-        <HeaderMobile />
-        {isOpenMenu && <MenuMobile changeLanguage={changeLanguage} />}
+        <HeaderMobile onToggleMenuMobile={toggleMenuMobile} />
+        <MenuMobile isOpenMenu={isOpenMenu} changeLanguage={changeLanguage} />
         <Header />
         <Suspense fallback="loading">
           <Switch>

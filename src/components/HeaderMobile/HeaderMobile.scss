@@ -6,7 +6,9 @@
   display: block;
   width: 100vw;
   height: 80px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   z-index: 10000;
   padding: 20px;
