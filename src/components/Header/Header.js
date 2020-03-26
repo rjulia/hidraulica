@@ -63,7 +63,11 @@ const Header = (props) => {
   return (
     <div className="container__fluid">
       <div className="container container_menu">
-        <Logo />
+        <Link
+          onClick={() => handelMenuEvent()}
+          exact to="/">    <Logo />
+        </Link>
+
         <ul className="menu">
           <li>
             <Link

@@ -6,6 +6,8 @@ export { default as Filter } from './Filter/Filter';
 
 export { default as Footer } from './Footer/Footer';
 export { default as Header } from './Header/Header';
+export { default as HeaderMobile } from './HeaderMobile/HeaderMobile';
+
 export { default as HeroImage } from './HeroImage/HeroImages';
 export { default as Input } from './Input/Input';
 

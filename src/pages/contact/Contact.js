@@ -4,6 +4,10 @@ import { HeroImage, WrapperSection, Title } from "components";
 import FormContact from "components/FormContact/FormContact";
 import ImgHero from "assets/images/img_slider_home_example.png";
 import './Contact.scss'
+import {
+
+  isMobile
+} from "react-device-detect";
 
 const Contact = (props) => {
   const { t } = props
@@ -25,7 +29,7 @@ const Contact = (props) => {
           <div className="map__wrapper">
             <div className="map__container">
 
-              <iframe title="mymap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.547941314626!2d2.7146310158159985!3d41.70869367923596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb3c8d36cd7c67%3A0x697c5d329cb57b1d!2sHidr%C3%A0ulica%20Catalana%20de%20Manteniment%20S.L.!5e0!3m2!1sen!2shk!4v1584928293062!5m2!1sen!2shk" width="100% " height="623" frameBorder="0" style={{ border: 0 }} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
+              <iframe title="mymap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.547941314626!2d2.7146310158159985!3d41.70869367923596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb3c8d36cd7c67%3A0x697c5d329cb57b1d!2sHidr%C3%A0ulica%20Catalana%20de%20Manteniment%20S.L.!5e0!3m2!1sen!2shk!4v1584928293062!5m2!1sen!2shk" width="100%" height={isMobile ? 623 : 623} frameBorder="0" style={{ border: 0 }} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
             </div>
           </div>
         </div>

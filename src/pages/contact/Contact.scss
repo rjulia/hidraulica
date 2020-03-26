@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .contact__container {
   min-height: 800px;
 
@@ -9,8 +11,20 @@
   }
 
   .map__container {
+    width: 100%;
     border-radius: 20px;
     height: 623px;
     overflow: hidden;
+  }
+
+  @include desktop {
+    width: 100%;
+
+    .map__container {
+      width: 100%;
+      border-radius: 20px;
+      height: 623px;
+      overflow: hidden;
+    }
   }
 }
