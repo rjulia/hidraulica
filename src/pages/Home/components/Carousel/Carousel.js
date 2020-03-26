@@ -40,7 +40,7 @@ const Carousel = ({ i18n }) => {
       setLoading(false)
     })
   }, [])
-
+  console.log(sliders)
   const settings = {
     infinite: true,
     dots: true,
@@ -59,7 +59,7 @@ const Carousel = ({ i18n }) => {
               <img src={_.get(slider, 'fields.thumbnail.fields.file.url')} alt="" />
             </figure>
             <div className="carousel__box--text">
-              <h4>{_.get(slider, 'fields.category')}</h4>
+              <h4>{_.get(slider, 'fields.subcategoria.fields.title')}</h4>
               <p>{_.get(slider, 'fields.title')}</p>
             </div>
           </div>

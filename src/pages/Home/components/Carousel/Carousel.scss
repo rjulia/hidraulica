@@ -34,6 +34,22 @@
       width: 100%;
       display: block;
       padding: 20px;
+
+      h4 {
+        font-family: $title;
+        font-size: 10px;
+        color: rgba($color: #fff, $alpha: 0.6);
+        letter-spacing: 0.3px;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        line-height: 22px;
+        font-family: $text;
+
+      }
     }
   }
 

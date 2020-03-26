@@ -44,7 +44,7 @@
     }
 
     .home__logos {
-      max-width: 300px;
+      max-width: 250px;
     }
   }
 
@@ -90,6 +90,10 @@
     .first_block--title,
     .second_block--title {
       padding-left: 40px;
+
+      .home__logos {
+        max-width: 300px;
+      }
 
     }
 
