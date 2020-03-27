@@ -33,7 +33,7 @@ function App({ t, i18n }) {
   return (
     <HeaderProvider>
       <Router>
-        <HeaderMobile onToggleMenuMobile={toggleMenuMobile} />
+        <HeaderMobile isOpenMenu={isOpenMenu} onToggleMenuMobile={toggleMenuMobile} />
         <MenuMobile isOpenMenu={isOpenMenu} changeLanguage={changeLanguage} onToggleMenuMobile={toggleMenuMobile} />
         <Header />
         <Suspense fallback="loading">
