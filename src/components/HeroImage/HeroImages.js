@@ -6,7 +6,7 @@ const HeroImages = ({ image, title, subtitle }) => {
 
   let heroClass = classNames({
     'hero-image__container': true,
-    'high': subtitle,
+    'high': subtitle ? true : false,
   })
 
   return (

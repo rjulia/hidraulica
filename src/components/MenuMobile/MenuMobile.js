@@ -10,11 +10,7 @@ import EspFlag from 'assets/icons/ic_flag_spain.svg'
 import Arrow from 'assets/icons/ic_arrow_down_blue.svg'
 
 const MenuMobile = ({ i18n, changeLanguage, isOpenMenu, toggleMenuMobile }) => {
-  const { toggleMenu, isOpen, isOpenMenuServices, onServicesMenu } = useMenu()
-
-
-
-  console.log(isOpenMenu)
+  const { toggleMenu, isOpenMenuServices } = useMenu()
 
   return (
     <div className={isOpenMenu ? "menu-mobile__container open" : 'menu-mobile__container'}>

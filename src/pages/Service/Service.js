@@ -36,13 +36,13 @@ const Service = (props) => {
       <div className="container">
         <HeroImage
           image={_.get(service, 'fields.heroImage.fields.file.url')}
-          title={_.get(service, 'fields.title')}
-          subtitle={_.get(service, 'fields.heroImage.subtitle')}
+          title={_.get(service, 'fields.titleImage')}
+          subtitle={_.get(service, 'fields.subtitleImage')}
         />
       </div>
       <WrapperSection classN={'block'}>
         <div className="first_block--title col-12 col-md-3">
-          <Title text={t('home.first_block.title')} />
+          <Title text={t('services.first_block.title')} />
         </div>
         <div className="first_block--block col-12 col-md-9">
           <p className='first_block--description'
@@ -52,7 +52,7 @@ const Service = (props) => {
       </WrapperSection>
       <WrapperSection classN={'column dark'}>
         <div className="first_block--title col-12">
-          <Title blue text={t('home.first_block.title')} />
+          <Title blue text={t('services.second_block.title')} />
         </div>
         <div className="first_block--block offer col-12">
           {
@@ -75,7 +75,7 @@ const Service = (props) => {
           <Title text={t('services.third_block.title')} />
           <Link className="first_block--link" to="/projectos">{t('services.third_block.button')} <img src={Arrow} alt="" /> </Link>
         </div>
-        <div className='col-12 ml-5 mt-5'>
+        <div className='col-12 ml-md-5 mt-md-5'>
           <div className="row">
             {
               relateds && _.map(relateds, related => (
