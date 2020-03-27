@@ -9,9 +9,12 @@ function HeaderProvider({ children }) {
 
 
   const toggleMenu = (value) => {
+    console.log('toogle')
     setIsOpen(value)
   }
   const onServicesMenu = (value) => {
+    console.log('menu')
+
     setIsOpenMenuServices(value)
   }
   const getServicesCtx = (services) => {

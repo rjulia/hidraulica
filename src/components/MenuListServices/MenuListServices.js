@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Link } from "react-router-dom";
 import { Grid } from '@material-ui/core';
 import './MenuListServices.scss';
@@ -8,7 +8,7 @@ import { Title } from 'components';
 const MenuListServices = ({ category, i18n, subservices, handelMenu }) => {
 
 
-  const listItmes = subservices.filter(subservice => _.get(subservice, 'fields.category') === category)
+  const listItmes = useMemo(() => subservices.filter(subservice => _.get(subservice, 'fields.category') === category), subservices)
 
   const HandleCloseMenu = () => {
     handelMenu(false)

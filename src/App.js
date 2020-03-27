@@ -18,6 +18,11 @@ function App({ t, i18n }) {
 
   const toggleMenuMobile = (e) => {
     e.preventDefault()
+    if (!isOpenMenu) {
+      document.body.classList.add('modal-open')
+    } else {
+      document.body.classList.remove('modal-open');
+    }
     setIsOpenMenu(!isOpenMenu)
   }
 
@@ -29,7 +34,7 @@ function App({ t, i18n }) {
     <HeaderProvider>
       <Router>
         <HeaderMobile onToggleMenuMobile={toggleMenuMobile} />
-        <MenuMobile isOpenMenu={isOpenMenu} changeLanguage={changeLanguage} />
+        <MenuMobile isOpenMenu={isOpenMenu} changeLanguage={changeLanguage} onToggleMenuMobile={toggleMenuMobile} />
         <Header />
         <Suspense fallback="loading">
           <Switch>

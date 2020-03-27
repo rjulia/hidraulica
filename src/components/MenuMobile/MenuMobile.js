@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './MenuMobile.scss'
 import { NavLink as Link, useLocation, } from "react-router-dom";
 import { withTranslation } from 'react-i18next';
+import { MenuServices } from "components/";
+import useMenu from 'components/Header/use-header-context';
 
 import CatFlag from 'assets/icons/ic_flag_catalonia.svg'
 import EspFlag from 'assets/icons/ic_flag_spain.svg'
 import Arrow from 'assets/icons/ic_arrow_down_blue.svg'
 
-const MenuMobile = ({ i18n, changeLanguage, isOpenMenu }) => {
+const MenuMobile = ({ i18n, changeLanguage, isOpenMenu, toggleMenuMobile }) => {
+  const { toggleMenu, isOpen, isOpenMenuServices, onServicesMenu } = useMenu()
 
-  const toggleMenu = () => {
 
-  }
+
   console.log(isOpenMenu)
 
   return (
@@ -19,26 +21,26 @@ const MenuMobile = ({ i18n, changeLanguage, isOpenMenu }) => {
       <div className="menu-mobile__box">
         <ul className="menu">
           <li>
-            <Link exact to="/">{i18n.t('menu.home')}</Link>
+            <Link exact onClick={(e) => toggleMenuMobile(e)} to="/">{i18n.t('menu.home')}</Link>
             <img src={Arrow} alt="" />
           </li>
           <li>
-            <Link to="/empresa">{i18n.t('menu.company')}</Link>
+            <Link onClick={(e) => toggleMenuMobile(e)} to="/empresa">{i18n.t('menu.company')}</Link>
             <img src={Arrow} alt="" />
           </li>
-          <li onClick={() => toggleMenu(true)}>
+          <li onClick={(e) => toggleMenu(true)}>
 
             <p>{i18n.t('menu.service')}</p>
 
             <img src={Arrow} alt="" />
           </li>
           <li>
-            <Link to="/projectos">{i18n.t('menu.project')}</Link>
+            <Link onClick={(e) => toggleMenuMobile(e)} to="/projectos">{i18n.t('menu.project')}</Link>
             <img src={Arrow} alt="" />
 
           </li>
           <li>
-            <Link to="/contact">{i18n.t('menu.contact')}</Link>
+            <Link onClick={(e) => toggleMenuMobile(e)} to="/contact">{i18n.t('menu.contact')}</Link>
             <img src={Arrow} alt="" />
 
           </li>
@@ -58,6 +60,9 @@ const MenuMobile = ({ i18n, changeLanguage, isOpenMenu }) => {
           </div>
         </div>
       </div>
+      {
+        isOpenMenuServices && <MenuServices />
+      }
     </div>
   )
 }
