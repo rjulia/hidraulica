@@ -13,7 +13,7 @@ const DropDownSelect = ({ options, title, keyValue, handleChage }) => {
       <label htmlFor={title}>{title}</label>
       <Select
         options={options}
-        clearable={true}
+        className={'dropdwon-custom'}
         name={title}
         onChange={(values) => handleChage(values, keyValue)}
       />

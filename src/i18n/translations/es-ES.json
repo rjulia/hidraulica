@@ -23,6 +23,10 @@
       "mantenimiento": "mantenimiento",
       "servicio": "servicio",
       "alquiler": "alquiler"
+    },
+    "orderBy": {
+      "recent": "La més recent",
+      "lastest": "La més antiga"
     }
   },
   "home": {
@@ -107,6 +111,7 @@
   },
   "projects": {
     "title": "Obres ejecutadas",
+    "refresh": "Reestableix els filtres",
     "subtitle": {
       "first_subtitle": {
         "label": "SERVEI",

@@ -14,10 +14,31 @@
     letter-spacing: 0.5px;
   }
 
-  .react-dropdown-select {
+  .react-dropdown-select.dropdwon-custom {
     border: none;
     font-family: $text;
     color: rgba($text_color, $alpha: 0.6);
     font-size: 14px;
+    text-transform: capitalize;
+
+
+    .react-dropdown-select-dropdown {
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    .react-dropdown-select-item {
+      border-bottom: 1px solid $grey_light;
+    }
+
+    .react-dropdown-select-item.react-dropdown-select-item-selected {
+      background: none;
+      color: $main_color;
+      border-bottom: 1px solid $grey_light;
+    }
+
+    .react-dropdown-select-dropdown-handle {
+      color: $main_color
+    }
   }
 }

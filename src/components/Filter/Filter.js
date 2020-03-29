@@ -3,13 +3,15 @@ import moment from 'moment';
 import "./Filter.scss";
 import { DropDown } from "components";
 import { useTranslation } from 'react-i18next'
-import DatePicker from "react-datepicker";
-
+import Refresh from 'assets/icons/ic_reestrablecer.svg'
 import "react-datepicker/dist/react-datepicker.css";
 
-const Filter = ({ handleChage, filterInitial }) => {
-
+const Filter = ({ handleChage, filterInitial, hasPorjectsFilter }) => {
   const { t } = useTranslation()
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   const category = [
 
@@ -53,28 +55,49 @@ const Filter = ({ handleChage, filterInitial }) => {
       value: 'otras'
     },
   ]
+  const orderBy = [
+    {
+      label: t('constants.orderBy.recent'),
+      value: 'sys.createdAt'
+    },
+    {
+      label: t('constants.orderBy.lastest'),
+      value: '-sys.createdAt'
+    },
+  ]
+
   moment.locale();
   return (
     <div className="filter__container">
-      <DropDown
-        title={"Categoria"}
-        options={category}
-        value={filterInitial.category}
-        handleChage={handleChage}
-        keyValue={'category'}
-      />
-      <DropDown
-        title={"Localizacion"}
-        options={cities}
-        value={filterInitial.location}
-        handleChage={handleChage}
-        keyValue={'location'}
+      <div>
+        <DropDown
+          title={t('projects.subtitle.first_subtitle.label')}
+          options={category}
+          value={filterInitial.category}
+          handleChage={handleChage}
+          keyValue={'category'}
+        />
+        <DropDown
+          title={t('projects.subtitle.second_subtitle.label')}
+          options={cities}
+          value={filterInitial.location}
+          handleChage={handleChage}
+          keyValue={'location'}
 
-      />
-      <DatePicker
-        selected={filterInitial.date}
-        onChange={date => handleChage(date, 'date')}
-      />
+        />
+        <DropDown
+          title={t('projects.subtitle.third_subtitle.label')}
+          options={orderBy}
+          value={filterInitial.date}
+          handleChage={handleChage}
+          keyValue={'date'}
+        />
+      </div>
+      <div className="refresh">
+
+        {hasPorjectsFilter && <div onClick={() => refreshPage()}>{t('projects.refresh')} <img src={Refresh} alt="" /> </div>}
+
+      </div>
     </div>
   )
 }

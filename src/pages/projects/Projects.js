@@ -11,7 +11,7 @@ import { Loading } from 'components';
 const initialStateFilter = {
   category: '',
   location: '',
-  date: new Date()
+  date: 'sys.createdAt'
 }
 
 const Projects = props => {
@@ -20,16 +20,16 @@ const Projects = props => {
   const promiseServices = getServices(i18n.language)
 
   const [projectsFiltered, setProjectsFiltered] = useState()
-  const [projects, setProjects] = useState([])
+  const [hasPorjectsFilter, setHasPorjectsFilter] = useState(false)
   const [isLoading, setLoading] = useState(true)
   const [services, setServices] = useState([])
   const [filterInitial, setFilterInitial] = useState(initialStateFilter)
 
   useEffect(() => {
+
     setLoading(true)
     Promise.all([promise, promiseServices])
       .then(data => {
-        setProjects(data[0])
         setProjectsFiltered(data[0])
         setServices(data[1])
       }).finally(() => {
@@ -37,34 +37,26 @@ const Projects = props => {
       })
   }, [])
 
-  const cleanFilter = () => {
-    setFilterInitial(initialStateFilter)
-    setProjectsFiltered(projects)
-  }
 
   const handleChage = (value, key) => {
 
-    console.log(value, key)
-
     const options = {
       ...filterInitial,
-      [key]: (key === 'date') ? value : value[0].value
+      [key]: value[0].value
     }
 
     const promiseProjectFiltered = filterProjects(i18n.language, options)
     promiseProjectFiltered.then(data => {
-      console.log(data)
       setProjectsFiltered(data)
-
+      setHasPorjectsFilter(true)
     }).finally(setFilterInitial(options))
-
 
   }
 
   const filterProps = {
     filterInitial,
     services,
-    projects,
+    hasPorjectsFilter,
     handleChage,
     ...props
   }
@@ -79,7 +71,7 @@ const Projects = props => {
 
         />
         <Filter {...filterProps} />
-        <div onClick={() => cleanFilter()}>Clean</div>
+
         <div className="row">
           {
             projectsFiltered && _.map(projectsFiltered, project => (

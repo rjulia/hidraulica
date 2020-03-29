@@ -34,12 +34,12 @@ const getProjects = (language) =>
 const filterProjects = (language, options = {}) => {
 
   const { location, category, date } = options
-  console.log(options)
+
   return client
     .getEntries({
       'fields.category': category,
       'fields.location': location,
-      'fields.executionDate[lte]': moment(date).format("YYYY-MM-DD"),
+      order: date,
       content_type: 'project',
       locale: language
     })
