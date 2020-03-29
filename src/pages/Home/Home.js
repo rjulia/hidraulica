@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import { withTranslation } from 'react-i18next';
-import { SliderHome, Button, Title, WrapperSection, } from 'components';
+import { SliderHome, Title, WrapperSection, } from 'components';
+import { getHomeSlider } from 'services/contentful'
+import { Loading } from 'components';
+
 import FormContact from "components/FormContact/FormContact";
 import './Home.scss'
 import Logos from "./components/Logos/logos-view";
@@ -11,11 +14,23 @@ import Arrow from "assets/icons/ic_arrow_down_white.svg";
 
 
 const Home = (props) => {
+  const { i18n } = props
+  const promise = getHomeSlider(i18n.language)
+  const [sliders, setSliders] = useState([])
+  const [isLoading, setLoading] = useState(true)
+  useEffect(() => {
+    promise.then(sliders => {
+      setSliders(sliders)
+      setLoading(false)
+    })
+  }, [])
+  console.log(sliders)
+  if (isLoading) return <Loading />
   const { t } = props
   return (
     <div className="container__fluid menu-on-top">
       <div className="container">
-        <SliderHome />
+        <SliderHome home sliders={sliders} />
       </div>
       <WrapperSection classN={'block'}>
         <div className="first_block--title col-12 col-md-3">

@@ -10,7 +10,7 @@ const Card = ({ project }) => {
   const subcategoria = _.get(project, 'fields.subcategoria.fields.title')
 
   return (
-    <Link to={`/projects/${slug}`} className="cart__container">
+    <Link to={`/projectos/${slug}`} className="cart__container">
       <figure>
         <img src={image} alt={title} />
       </figure>

@@ -1,6 +1,5 @@
 import _ from 'lodash'
 import React from 'react'
-import { Grid, Container } from '@material-ui/core';
 import { withTranslation, useTranslation } from 'react-i18next';
 import './Footer.scss'
 import { Logo } from "components";

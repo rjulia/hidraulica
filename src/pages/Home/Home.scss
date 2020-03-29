@@ -30,8 +30,9 @@
     padding: 10px;
 
     .first_block--description {
+      font-family: $text;
       font-size: 14px;
-      line-height: 22px;
+      line-height: 28px;
       letter-spacing: 0.4px;
       color: $text_color;
     }

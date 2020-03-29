@@ -47,11 +47,12 @@ const filterProjects = (language, options = {}) => {
 
 }
 
-const getSingleProject = slug =>
+const getSingleProject = (language, slug) =>
   client
     .getEntries({
       'fields.slug': slug,
-      content_type: 'project'
+      content_type: 'project',
+      locale: language
     })
     .then(response => response.items)
 

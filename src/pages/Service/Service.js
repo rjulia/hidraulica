@@ -4,11 +4,9 @@ import Arrow from "assets/icons/ic_arrow_down_black.svg";
 
 import React, { useEffect, useState } from 'react'
 import './Services.scss'
-import { SliderHome, Title, WrapperSection, HeroImage, Card } from 'components';
+import { Title, WrapperSection, HeroImage, Card } from 'components';
 import { getService } from '../../services/contentful'
-import {
-  useParams
-} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Check from 'assets/icons/ic_check_white.svg'
 import { withTranslation } from 'react-i18next';
 
@@ -29,8 +27,12 @@ const Service = (props) => {
       }).finally(() => {
         setLoading(false)
       })
-  }, [slug])
+  }, [])
+
   console.log(service)
+  if (isLoading) {
+    return <p>Is loading</p>
+  }
   return (
     <div className="container__fluid services menu-on-top">
       <div className="container">

@@ -5,6 +5,7 @@
   border-radius: 20px;
   overflow: hidden;
   height: 278px;
+  position: relative;
 
   .slick-slider {
     height: 280px;
@@ -40,8 +41,8 @@
 
   .author {
     position: absolute;
-    bottom: 30px;
-    right: 20px;
+    bottom: 50px;
+    right: 35px;
     color: $white;
     font-size: 11px;
 
@@ -51,13 +52,26 @@
   }
 
   img {
-    transform: scaleY(1.04);
+    transform: scale(1.04);
+    width: 100%;
+  }
+
+  .buttonPlay {
+    position: absolute;
+    right: 34px;
+    bottom: 34px;
+    z-index: 100000;
+    cursor: pointer;
+
+    svg {
+      fill: #fff
+    }
   }
 
   .slick-dots {
     position: absolute;
-    left: 20px;
-    bottom: 10px;
+    right: 45px;
+    bottom: 35px;
     text-align: right;
     width: 70px;
 
@@ -102,8 +116,8 @@
 
     .slick-dots {
       position: absolute;
-      right: 20px;
-      bottom: 10px;
+      right: 55px;
+      bottom: 31px;
       text-align: right;
       width: 200px;
 
