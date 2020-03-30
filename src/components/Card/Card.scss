@@ -1,6 +1,9 @@
 @import "../../scss/variables";
 
 .cart__container {
+  &:hover {
+    color: $main_color;
+  }
 
   figure {
     padding: 20px;
@@ -33,4 +36,5 @@
       line-height: 28px;
     }
   }
+
 }

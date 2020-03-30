@@ -18,18 +18,18 @@ const Company = (props) => {
         />
       </div>
       <WrapperSection classN={'block'}>
-        <div className="first_block--title col-12 col-md-3">
+        <div className="first_block--title col-12 col-md-4">
           <Title text={t('company.first_block.title')} />
         </div>
-        <div className="first_block--block">
+        <div className="first_block--block col-12 col-md-8">
           <p className='first_block--description'>{t('company.first_block.description')}</p>
         </div>
       </WrapperSection>
       <WrapperSection classN={'block light'}>
-        <div className="first_block--title col-12 col-md-3">
+        <div className="first_block--title col-12 col-md-4">
           <Title text={t('company.second_block.title')} />
         </div>
-        <div className="first_block--block col-12 col-md-9">
+        <div className="first_block--block col-12 col-md-8">
           <p className='first_block--description'>{t('company.second_block.description')}</p>
           <ImageFrame img={Factory} style={{ marginTop: ' 50px' }} />
         </div>

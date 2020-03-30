@@ -1,8 +1,17 @@
+@import '../../scss/variables';
+
 .form__container {
   margin-top: 60px;
 
   input {
     border: none;
+    width: 100%;
+
+    &:focus {
+      outline: none !important;
+      border: none;
+      box-shadow: 0 0 5px $main_color;
+    }
   }
 
   .form__button__box {

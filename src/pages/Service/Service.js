@@ -43,10 +43,10 @@ const Service = (props) => {
         />
       </div>
       <WrapperSection classN={'block'}>
-        <div className="first_block--title col-12 col-md-3">
+        <div className="first_block--title col-12 col-md-4">
           <Title text={t('services.first_block.title')} />
         </div>
-        <div className="first_block--block col-12 col-md-9">
+        <div className="first_block--block col-12 col-md-8">
           <p className='first_block--description'
             dangerouslySetInnerHTML={{ __html: _.get(service, 'fields.description.content[0].content[0].value') }} />
 

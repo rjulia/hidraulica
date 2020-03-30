@@ -6,22 +6,42 @@ import { getProjects } from 'services/contentful'
 import { withTranslation } from 'react-i18next';
 import './Carousel.scss'
 import Arrow from 'assets/icons/ic_arrow_down_white.svg'
+import ArrowB from 'assets/icons/ic_arrow_down_black.svg'
+
 import { Loading } from 'components';
 
 const ArrowNext = (props) => {
   const { className, onClick } = props;
+  const [hover, setHover] = useState(false)
+
+  const handelHover = () => {
+    setHover(!hover)
+  }
+
   return (
-    <span className={className} onClick={onClick}>
-      <img src={Arrow} alt="" />
+    <span
+      className={className}
+      onClick={onClick}
+      onMouseEnter={handelHover}
+      onMouseLeave={handelHover}>
+      <img src={hover ? ArrowB : Arrow} alt="" />
     </span>
   )
 }
 
 const ArrowPrev = (props) => {
   const { className, onClick } = props;
+  const [hover, setHover] = useState(false)
+
+  const handelHover = () => {
+    setHover(!hover)
+  }
   return (
-    <span className={className} onClick={onClick}>
-      <img src={Arrow} alt="" />
+    <span className={className}
+      onClick={onClick}
+      onMouseEnter={handelHover}
+      onMouseLeave={handelHover}>
+      <img src={hover ? ArrowB : Arrow} alt="" />
     </span>
   )
 }

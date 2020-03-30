@@ -108,6 +108,10 @@
     z-index: 100;
     cursor: pointer;
 
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.8);
+    }
+
     &:before {
       content: '';
     }
@@ -140,6 +144,48 @@
 
     .carousel__container {
       max-width: 1240px;
+    }
+
+    .carousel__cart {
+
+      width: 376px;
+      padding: 2%;
+
+      figure {
+        border-radius: 10px;
+        padding: 20px 14px;
+        margin: 10px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .carousel__box--text {
+        width: 100%;
+        display: block;
+        padding: 20px;
+
+        h4 {
+          font-family: $text;
+          font-size: 14px;
+          color: rgba($color: #fff, $alpha: 0.6);
+          letter-spacing: 0.3px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: 0.3px;
+          line-height: 22px;
+          font-family: $text;
+          margin-top: 14px;
+
+        }
+      }
     }
 
     .title__slider {

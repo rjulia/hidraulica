@@ -16,7 +16,7 @@ const Footer = ({ i18n }) => {
         <div className="row">
           <div className='col-md-6 col-12'>
             <Logo className='logo_footer' dark />
-            <div className="footer__address d-none">
+            <div className="footer__address d-none d-md-block">
               <p className="footer__address--text">Pol. Ind. Can Verdalet · C/A Nau A2 · 08490 Tordera · Barcelona  <br />
                 Tel: 93 764 20 82 - Fax: 93 764 20 78</p>
               <p>{t('home.footer.copyright', { year })}</p>

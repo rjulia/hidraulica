@@ -94,7 +94,7 @@
 
   @include desktop {
     display: block;
-    height: 424px;
+    height: 420px;
 
     .slick-slider {
       height: 424px;
@@ -114,10 +114,22 @@
       line-height: 42px;
     }
 
+    .author {
+      position: absolute;
+      bottom: 55px;
+      right: 35px;
+      color: $white;
+      font-size: 11px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
     .slick-dots {
       position: absolute;
       right: 55px;
-      bottom: 31px;
+      bottom: 34px;
       text-align: right;
       width: 200px;
 

@@ -21,10 +21,10 @@ const Contact = (props) => {
         />
       </div>
       <WrapperSection classN={'block'}>
-        <div className="first_block--title col-12 col-md-3">
-          <Title text={t('contact.title')} />
+        <div className="first_block--title col-12 col-md-4">
+          <Title text={t('contact.subtitle')} />
         </div>
-        <div className="first_block--block col-12 col-md-9">
+        <div className="first_block--block col-12 col-md-8">
           <p className='first_block--description mb-5'>{t('contact.description')}</p>
           <div className="map__wrapper">
             <div className="map__container">
