@@ -7,6 +7,10 @@
     color: #333;
     margin-bottom: 32px;
 
+    & a:hover {
+      color: $main_color;
+    }
+
     .breadcrumb__end {
       font-weight: 600;
       color: $main_color

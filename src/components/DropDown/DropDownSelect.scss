@@ -33,7 +33,8 @@
 
     .react-dropdown-select-item.react-dropdown-select-item-selected {
       background: none;
-      color: $main_color;
+      color: black;
+      font-weight: 600;
       border-bottom: 1px solid $grey_light;
     }
 
