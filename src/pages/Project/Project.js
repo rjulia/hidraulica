@@ -6,7 +6,7 @@ import './Project.scss'
 import { getSingleProject } from '../../services/contentful'
 import { withTranslation } from 'react-i18next';
 import { useParams } from "react-router-dom";
-import { SliderHome, Title, WrapperSection } from "components";
+import { SliderHome, Title, WrapperSection, Spiner } from "components";
 
 const Project = (props) => {
 
@@ -29,7 +29,7 @@ const Project = (props) => {
 
   console.log(project)
   if (isLoading) {
-    return <p>Loading</p>
+    return <Spiner />
   }
   return (
     <div className="projects__container">

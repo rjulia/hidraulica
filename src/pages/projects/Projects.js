@@ -6,7 +6,7 @@ import { getProjects, getServices, filterProjects } from '../../services/content
 import { HeroImage, Filter, Card } from "components";
 import './Projectes.scss'
 import ImgHero from "assets/images/img_projectes.png";
-import { Loading } from 'components';
+import { Spiner } from 'components';
 
 const initialStateFilter = {
   category: '',
@@ -60,7 +60,7 @@ const Projects = props => {
     handleChage,
     ...props
   }
-  if (isLoading) return <Loading />
+  if (isLoading) return <Spiner />
   return (
     <div className='projects__contianer container-fluid menu-on-top'>
       <div className="container ">
